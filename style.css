@@ -20,4 +20,11 @@ img {
 }
 #addItemWindow {
     display: none;
+    background-color: white;
+    width: 265px;
+    height: 210px;
+    position: fixed;
+    top: 36.6%;
+    border: gray solid;
+    z-index: 1;
 }
