@@ -14,15 +14,15 @@ h1 {
     top: 0px;
 }
 img {
-    width: 250px;
+    width: 285px;
     opacity: 0.5;
     cursor: pointer;
 }
 #addItemWindow {
     display: none;
     background-color: white;
-    width: 265px;
-    height: 210px;
+    width: 285px;
+    height: 300px;
     position: fixed;
     top: 36.6%;
     border: gray solid;
