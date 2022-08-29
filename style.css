@@ -27,4 +27,24 @@ img {
     top: 36.6%;
     border: gray solid;
     z-index: 1;
+    text-align: center;
+}
+#addItemWindow label {
+    font-size: 25px;
+    margin: 5px 0 5px 0;
+}
+#addItemWindow input {
+    width: 90%;
+    height: 35px;
+    margin: 5px;
+}
+#addItemWindow select {
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+    height: 35px;
+    padding: 5px 0 5px 0;
+}
+#addItemWindow input[type='button'] {
+    font-size: 25px;
 }
