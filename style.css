@@ -29,6 +29,13 @@ img {
     z-index: 1;
     text-align: center;
 }
+#addItemWindow .centralizar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 #addItemWindow label {
     font-size: 25px;
     margin: 5px 0 5px 0;
