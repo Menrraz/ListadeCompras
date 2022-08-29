@@ -9,7 +9,7 @@ function addItem() {
     <section id='addItemWindow'>
         <label>Adicione um item</label>
         <input type="text" name="NomeDoItem" id="NomeDoItem">
-        <label>Quantidade (Quilo ou Unidade)</label>
+        <label>Quantidade</label>
         <select>
             <option value="unity">Unidade</option>
             <option value="kg">Quilo</option>
