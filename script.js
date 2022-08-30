@@ -19,3 +19,10 @@ function addItem() {
     const addItemWindow = document.getElementById('addItemWindow')
     addItemWindow.style.display = 'block'
 }
+function add() {
+    let itemName = document.getElementById('itemName')
+    let itemQuantity = document.getElementById('itemQuantity')
+    if (itemName.value == '' || itemQuantity.value == 0) {
+        warning.style.color = 'red'
+    }
+}
