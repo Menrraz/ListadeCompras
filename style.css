@@ -38,12 +38,14 @@ img {
 }
 #addItemWindow label {
     font-size: 25px;
-    margin: 5px 0 5px 0;
+    margin: 0 0 5px 0;
 }
 #addItemWindow input {
     width: 90%;
     height: 35px;
     margin: 5px;
+    text-align: center;
+    font-size: 20px;
 }
 #addItemWindow select {
     font-size: 20px;
