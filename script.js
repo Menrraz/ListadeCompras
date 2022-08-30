@@ -15,7 +15,7 @@ function addItem() {
                 <option value="kg">Quilo</option>
             </select>
             <input type="number" name="quantidade" id="itemQuantity">
-            <input type="button" value="Adicionar">
+            <input type="button" value="Adicionar" onclick='add()'>
             <p id='warning'>Preencha todos os dados.</p>
         </div>
     </section>`)
