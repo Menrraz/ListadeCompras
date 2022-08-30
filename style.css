@@ -57,3 +57,6 @@ img {
 #addItemWindow input[type='button'] {
     font-size: 25px;
 }
+#warning {
+    color: transparent;
+}
