@@ -1,4 +1,4 @@
-let add = document.getElementById('add').addEventListener('click', teste())
+let add = document.getElementById('add').addEventListener('click', addItem)
 // Faça funcionar!
 function main() {
 
