@@ -15,9 +15,11 @@ function addItem() {
         </select>
         <input type="number" name="quantidade" id="itemQuantity">
         <input type="button" value="Adicionar">
+        <p id='warning'>Preencha todos os dados.</p>
     </section>`)
     const addItemWindow = document.getElementById('addItemWindow')
     addItemWindow.style.display = 'block'
+    
 }
 function add() {
     let itemName = document.getElementById('itemName')
