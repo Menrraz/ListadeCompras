@@ -1,10 +1,10 @@
 let addFirstItem = document.getElementById('addFirstItem').addEventListener('click', addItem)
+const mainHTML = document.querySelector('main')
 function main() {
 
 }
 function addItem() {
-    const main = document.querySelector('main')
-    main.insertAdjacentHTML('beforeend', `
+    mainHTML.insertAdjacentHTML('beforeend', `
     <section id='addItemWindow'>
         <div class='centralizar'>
             <label>Adicione um item</label>
@@ -28,5 +28,7 @@ function add() {
     let itemQuantity = document.getElementById('itemQuantity')
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
+    } else {
+        mainHTML.insertAdjacentHTML('beforeend', `<section>${itemName, itemQuantity}</section>`)
     }
 }
