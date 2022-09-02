@@ -1,4 +1,5 @@
-let addFirstItem = document.getElementById('addFirstItem').addEventListener('click', addItem)
+let addFirstItem = document.getElementById('addFirstItem')
+addFirstItem.addEventListener('click', addItem)
 const mainHTML = document.querySelector('main')
 function main() {
 
@@ -24,11 +25,14 @@ function addItem() {
     
 }
 function add() {
+    let addItemWindow = document.getElementById('addItemWindow')
     let itemName = document.getElementById('itemName')
     let itemQuantity = document.getElementById('itemQuantity')
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
     } else {
-        mainHTML.insertAdjacentHTML('beforeend', `<section>${itemName, itemQuantity}</section>`)
+        mainHTML.insertAdjacentHTML('beforeend', `<section>${itemName.value}</section>`)
+        addItemWindow.remove()  
+        addFirstItem.remove()
     }
 }
