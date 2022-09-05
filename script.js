@@ -31,7 +31,7 @@ function add() {
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
     } else {
-        mainHTML.insertAdjacentHTML('beforeend', `<section class='carousel'>
+        mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
             <div class='list'>${itemName.value}${itemQuantity.value}</div>
             <div class='cart'>${itemName.value}${itemQuantity.value}</div>     
         </section>`)
