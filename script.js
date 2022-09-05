@@ -31,7 +31,10 @@ function add() {
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
     } else {
-        mainHTML.insertAdjacentHTML('beforeend', `<section>${itemName.value}</section>`)
+        mainHTML.insertAdjacentHTML('beforeend', `<section class='carousel'>
+            <div class='list'>${itemName.value}${itemQuantity.value}</div>
+            <div class='cart'>${itemName.value}${itemQuantity.value}</div>     
+        </section>`)
         addItemWindow.remove()  
         addFirstItem.remove()
     }
