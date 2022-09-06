@@ -66,6 +66,20 @@ img {
     height: 80%;
     background-color: lightgray;
 }
-.main-card div {
-    width: 300px;
+.main-card .list, .cart {
+    width: 50%;
+}
+.main-card-header {
+    display: flex;
+    width: 100%;
+}
+.list-card {
+    background-color: red;
+    height: 100%;
+    display: block;
+}
+.cart-card {
+    background-color: blue;
+    height: 100%;
+    display: none;
 }
