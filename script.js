@@ -32,8 +32,16 @@ function add() {
         warning.style.color = 'red'
     } else {
         mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
-            <div class='list'>${itemName.value}${itemQuantity.value}</div>
-            <div class='cart'>${itemName.value}${itemQuantity.value}</div>     
+            <div class='main-card-header'>
+                <p class='list'>Lista</p>
+                <p class='cart'>Carrinho</p>
+            </div>
+            <div class='list-card'>
+                list
+            </div>
+            <div class='cart-card'>
+                cart
+            </div>    
         </section>`)
         addItemWindow.remove()  
         addFirstItem.remove()
