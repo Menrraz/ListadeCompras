@@ -33,8 +33,8 @@ function add() {
     } else {
         mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
             <div class='main-card-header'>
-                <p class='list'>Lista</p>
-                <p class='cart'>Carrinho</p>
+                <p class='list' onclick="showListOrCard('list')">Lista</p>
+                <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
             </div>
             <div class='list-card'>
                 list
