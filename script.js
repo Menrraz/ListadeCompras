@@ -56,10 +56,14 @@ function add() {
 }
 function showListOrCard(show) {
     if (show == 'list') {
-        let list = document.querySelector('.list-card').style.display = 'block'
-        let card = document.querySelector('.cart-card').style.display = 'none'
+        document.querySelector('.list-card').style.display = 'block'
+        document.querySelector('.cart-card').style.display = 'none'
+        document.querySelector('.list').style.backgroundColor = 'yellow'
+        document.querySelector('.cart').style.backgroundColor = 'transparent'
     } else { // if 'cart'
-        let card = document.querySelector('.cart-card').style.display = 'block'
-        let list = document.querySelector('.list-card').style.display = 'none'
+        document.querySelector('.cart-card').style.display = 'block'
+        document.querySelector('.list-card').style.display = 'none'
+        document.querySelector('.list').style.backgroundColor = 'yellow'
+        document.querySelector('.cart').style.backgroundColor = 'transparent'
     }
 }
