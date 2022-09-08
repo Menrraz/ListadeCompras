@@ -75,12 +75,10 @@ img {
     width: 100%;
 }
 .list-card {
-    background-color: red;
     height: 100%;
     display: block;
 }
 .cart-card {
-    background-color: blue;
     height: 100%;
     display: none;
 }
