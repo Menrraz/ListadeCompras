@@ -37,7 +37,10 @@ function add() {
                 <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
             </div>
             <div class='list-card'>
-                list
+                <div class='list-card-header'>
+                    <p>Nome do Item</p>
+                    <p>Quantidade</p>
+                </div>
             </div>
             <div class='cart-card'>
                 cart
