@@ -43,7 +43,11 @@ function add() {
                 </div>
             </div>
             <div class='cart-card'>
-                cart
+                <div class='cart-card-header'>
+                    <p>Nome do Item</p>
+                    <p>Quantidade</p>
+                    <p>Preço</p>
+                </div>
             </div>    
         </section>`)
         addItemWindow.remove()  
