@@ -84,3 +84,7 @@ img {
     height: 100%;
     display: none;
 }
+.list-card-header {
+    display: flex;
+    justify-content: space-around;
+}
