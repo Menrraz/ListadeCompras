@@ -90,4 +90,6 @@ img {
 .list-card-header, .cart-card-header {
     display: flex;
     justify-content: space-around;
+    padding: 3px;
+    border-bottom: 1px solid black;
 }
