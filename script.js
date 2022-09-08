@@ -47,3 +47,12 @@ function add() {
         addFirstItem.remove()
     }
 }
+function showListOrCard(show) {
+    if (show == 'list') {
+        let list = document.querySelector('.list-card').style.display = 'block'
+        let card = document.querySelector('.cart-card').style.display = 'none'
+    } else { // if 'cart'
+        let card = document.querySelector('.cart-card').style.display = 'block'
+        let list = document.querySelector('.list-card').style.display = 'none'
+    }
+}
