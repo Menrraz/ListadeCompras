@@ -5,24 +5,27 @@ function main() {
 
 }
 function addItem() {
-    mainHTML.insertAdjacentHTML('beforeend', `
-    <section id='addItemWindow'>
-        <div class='centralizar'>
-            <label>Adicione um item</label>
-            <input type="text" name="NomeDoItem" id="itemName">
-            <label>Quantidade</label>
-            <select>
-                <option value="unity">Unidade</option>
-                <option value="kg">Quilo</option>
-            </select>
-            <input type="number" name="quantidade" id="itemQuantity">
-            <input type="button" value="Adicionar" onclick='add()'>
-            <p id='warning'>Preencha todos os dados.</p>
-        </div>
-    </section>`)
-    const addItemWindow = document.getElementById('addItemWindow')
-    addItemWindow.style.display = 'block'
+    mainHTML.insertAdjacentHTML('beforeend', 
+    `<div id='addItemWindow'>
+        ${addDivItemWindow()}
+    </div>`)
+    const addItemWindow = document.getElementById('addItemWindow').style.display = 'block'
     
+}
+function addDivItemWindow() {
+    return `
+    <div class='centralizar'>
+        <label>Adicione um item</label>
+        <input type="text" name="NomeDoItem" id="itemName">
+        <label>Quantidade</label>
+        <select>
+            <option value="unity">Unidade</option>
+            <option value="kg">Quilo</option>
+        </select>
+        <input type="number" name="quantidade" id="itemQuantity">
+        <input type="button" value="Adicionar" onclick='add()'>
+        <p id='warning'>Preencha todos os dados.</p>
+    </div>`
 }
 function add() {
     let addItemWindow = document.getElementById('addItemWindow')
