@@ -16,13 +16,13 @@ function addDivItemWindow() {
     return `
     <div class='centralizar'>
         <label>Adicione um item</label>
-        <input type="text" name="NomeDoItem" id="itemName">
+        <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico'>
         <label>Quantidade</label>
         <select>
             <option value="unity">Unidade</option>
             <option value="kg">Quilo</option>
         </select>
-        <input type="number" name="quantidade" id="itemQuantity">
+        <input type="number" name="quantidade" id="itemQuantity" placeholder='Ex.: 3'>
         <input type="button" value="Adicionar" onclick='add()'>
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
