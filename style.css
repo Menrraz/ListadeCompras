@@ -60,6 +60,7 @@ img {
 #warning {
     color: transparent;
     padding: 0 0 5px 0;
+    font-size: 13px;
 }
 .main-card {
     display: flex;
