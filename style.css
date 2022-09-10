@@ -59,6 +59,7 @@ img {
 }
 #warning {
     color: transparent;
+    padding: 0 0 5px 0;
 }
 .main-card {
     display: flex;
