@@ -66,7 +66,8 @@ img {
     flex-direction: column;
     width: 90%;
     height: 80%;
-    background-color: lightgray;
+    border: 2px solid gray;
+    border-radius: 5px;
 }
 .main-card .list, .cart {
     width: 50%;
