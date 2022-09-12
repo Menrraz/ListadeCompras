@@ -126,3 +126,10 @@ img {
     padding: 3px;
     border-bottom: 1px solid black;
 }
+p.noItems {
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
