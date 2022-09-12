@@ -45,6 +45,7 @@ function add() {
                     <p>Nome do Item</p>
                     <p>Quantidade</p>
                 </div>
+                <p class='noItems'>Sem itens</p>
             </div>
             <div class='cart-card'>
                 <div class='cart-card-header'>
@@ -52,6 +53,7 @@ function add() {
                     <p>Quantidade</p>
                     <p>Preço</p>
                 </div>
+                <p class='noItems'>Sem itens</p>
             </div>    
         </section>`)
         addItemWindow.remove()  
