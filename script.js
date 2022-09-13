@@ -58,6 +58,7 @@ function add(time) {
         </section>`)
         addItemWindow.remove()  
         addFirstItem.remove()
+        document.querySelector('.noItems').remove()
     }
      else {
         let items = document.querySelector('.list-card')
