@@ -7,12 +7,12 @@ function main() {
 function addItem() {
     mainHTML.insertAdjacentHTML('beforeend', 
     `<div id='addItemWindow'>
-        ${addDivItemWindow()}
+        ${addDivItemWindow('first')}
     </div>`)
     const addItemWindow = document.getElementById('addItemWindow').style.display = 'block'
     
 }
-function addDivItemWindow() {
+function addDivItemWindow(time) {
     return `
     <div class='centralizar'>
         <label>Adicione um item</label>
@@ -23,17 +23,17 @@ function addDivItemWindow() {
             <option value="kg">Quilo</option>
         </select>
         <input type="number" name="quantidade" id="itemQuantity" placeholder='Ex.: 3'>
-        <input type="button" value="Adicionar" onclick='add()'>
+        <input type="button" value="Adicionar" onclick='add('${time}')'>
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
-function add() {
+function add(time) {
     let addItemWindow = document.getElementById('addItemWindow')
     let itemName = document.getElementById('itemName')
     let itemQuantity = document.getElementById('itemQuantity')
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
-    } else {
+    } else if (time == 'first') {
         mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
             ${addDivItemWindow()}
             <div class='main-card-header'>
@@ -58,6 +58,15 @@ function add() {
         </section>`)
         addItemWindow.remove()  
         addFirstItem.remove()
+    }
+     else {
+        let items = document.querySelector('.list-card')
+        items.insertAdjacentHTML('beforeend', `
+        <div class='items'>
+            <p class='item-name'>${itemName.value}</p>
+            <p class='item-quantity'>${itemQuantity.value}</p>
+        </div>
+        `)
     }
 }
 function showListOrCard(show) {
