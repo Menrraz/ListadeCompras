@@ -23,7 +23,7 @@ function addDivItemWindow(time) {
             <option value="kg">Quilo</option>
         </select>
         <input type="number" name="quantidade" id="itemQuantity" placeholder='Ex.: 3'>
-        <input type="button" value="Adicionar" onclick='add('${time}')'>
+        <input type="button" value="Adicionar" onclick="add('${time}')">
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
