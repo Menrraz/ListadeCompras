@@ -127,7 +127,7 @@ img {
 }
 .list-card-header, .cart-card-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 3px;
     border-bottom: 1px solid black;
 }
@@ -137,6 +137,13 @@ p.noItems {
     justify-content: center;
     align-items: center;
     color: gray;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(220, 220, 220);
+    padding: 3px;
+    margin: 3px;
 }
 p.item-name {
     width: 165px;
