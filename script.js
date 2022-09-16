@@ -1,6 +1,8 @@
 let addFirstItem = document.getElementById('addFirstItem')
 addFirstItem.addEventListener('click', addItem)
 const mainHTML = document.querySelector('main')
+let list = {}
+let cart = {}
 function main() {
 
 }
@@ -34,6 +36,7 @@ function add(time) {
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
     } else if (time == 'first') {
+        list['item1'] = [itemName.value, itemQuantity.value]
         mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
             ${addDivItemWindow()}
             <div class='main-card-header'>
@@ -69,6 +72,7 @@ function add(time) {
         </div>
         `)
     }
+    localStorage.setItem('teste', JSON.stringify(list))
 }
 function showListOrCard(show) {
     if (show == 'list') {
