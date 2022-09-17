@@ -128,7 +128,7 @@ img {
 .list-card-header, .cart-card-header {
     display: flex;
     justify-content: space-between;
-    padding: 3px;
+    padding: 3px 5px 3px 5px;
     border-bottom: 1px solid black;
 }
 p.noItems {
