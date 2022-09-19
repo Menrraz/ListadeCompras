@@ -36,13 +36,14 @@ function add(time) {
     if (itemName.value == '' || itemQuantity.value == 0) {
         warning.style.color = 'red'
     } else if (time == 'first') {
-        list['item1'] = [itemName.value, itemQuantity.value]
+        list = list + itemName.value + '_' + itemQuantity.value + '-'
         addMainCard(itemName.value, itemQuantity.value)
         addItemWindow.remove()  
         addFirstItem.remove()
         document.querySelector('.noItems').remove()
     }
      else {
+        list = list + itemName.value + '_' + itemQuantity.value + '-'
         let items = document.querySelector('.list-card')
         items.insertAdjacentHTML('beforeend', `
         <div class='items'>
@@ -51,7 +52,7 @@ function add(time) {
         </div>
         `)
     }
-    localStorage.setItem('teste', JSON.stringify(list))
+    localStorage.setItem('LSItems', list)
 }
 function addMainCard(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
