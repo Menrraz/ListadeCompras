@@ -37,28 +37,7 @@ function add(time) {
         warning.style.color = 'red'
     } else if (time == 'first') {
         list['item1'] = [itemName.value, itemQuantity.value]
-        mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
-            ${addDivItemWindow()}
-            <div class='main-card-header'>
-                <p class='list' onclick="showListOrCard('list')">Lista</p>
-                <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
-            </div>
-            <div class='list-card'>
-                <div class='list-card-header'>
-                    <p>Nome do Item</p>
-                    <p>Quantidade</p>
-                </div>
-                <p class='noItems'>Sem itens</p>
-            </div>
-            <div class='cart-card'>
-                <div class='cart-card-header'>
-                    <p>Nome do Item</p>
-                    <p>Quantidade</p>
-                    <p>Preço</p>
-                </div>
-                <p class='noItems'>Sem itens</p>
-            </div>    
-        </section>`)
+        addMainCard(itemName.value, itemQuantity.value)
         addItemWindow.remove()  
         addFirstItem.remove()
         document.querySelector('.noItems').remove()
@@ -73,6 +52,34 @@ function add(time) {
         `)
     }
     localStorage.setItem('teste', JSON.stringify(list))
+}
+function addMainCard(item, quantity) {
+    mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
+    ${addDivItemWindow()}
+    <div class='main-card-header'>
+        <p class='list' onclick="showListOrCard('list')">Lista</p>
+        <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
+    </div>
+    <div class='list-card'>
+        <div class='list-card-header'>
+            <p>Nome do Item</p>
+            <p>Quantidade</p>
+        </div>
+        <div class='items'>
+            <p class='item-name'>${item}</p>
+            <p class='item-quantity'>${quantity}</p>
+        </div>
+        <p class='noItems'>Sem itens</p>
+    </div>
+    <div class='cart-card'>
+        <div class='cart-card-header'>
+            <p>Nome do Item</p>
+            <p>Quantidade</p>
+            <p>Preço</p>
+        </div>
+        <p class='noItems'>Sem itens</p>
+    </div>
+</section>`)
 }
 function showListOrCard(show) {
     if (show == 'list') {
