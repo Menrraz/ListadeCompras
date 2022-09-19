@@ -4,7 +4,10 @@ const mainHTML = document.querySelector('main')
 let list = ''
 let cart = ''
 function main() {
-
+    if(localStorage.length > 0) {
+        addFirstItem.remove()
+        add()
+    }
 }
 function addItem() {
     mainHTML.insertAdjacentHTML('beforeend', 
