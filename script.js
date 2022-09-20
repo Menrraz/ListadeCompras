@@ -6,7 +6,7 @@ let cart = ''
 function main() {
     if(localStorage.length > 0) {
         addFirstItem.remove()
-        add()
+        add('ThereIsAList')
     }
 }
 function addItem() {
