@@ -17,7 +17,7 @@ function addItem() {
     const addItemWindow = document.getElementById('addItemWindow').style.display = 'block'
     
 }
-function addDivItemWindow(time) {
+function addDivItemWindow(condition) {
     return `
     <div class='centralizar'>
         <label>Adicione um item</label>
@@ -28,15 +28,15 @@ function addDivItemWindow(time) {
             <option value="kg">Quilo</option>
         </select>
         <input type="number" name="quantidade" id="itemQuantity" placeholder='Ex.: 3'>
-        <input type="button" value="Adicionar" onclick="add('${time}')">
+        <input type="button" value="Adicionar" onclick="add('${condition}')">
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
-function add(time) {
+function add(condition) {
     let addItemWindow = document.getElementById('addItemWindow')
     let itemName = document.getElementById('itemName')
     let itemQuantity = document.getElementById('itemQuantity')
-    if (time == 'ThereIsAList') { // If there is a list already
+    if (condition == 'ThereIsAList') { // If there is a list already
         addMainCard()
         document.querySelector('.noItems').remove()
         let items = document.querySelector('.list-card')
@@ -53,7 +53,7 @@ function add(time) {
     } else { // If there isn't a list
         if (itemName.value == '' || itemQuantity.value == 0) {
             warning.style.color = 'red'
-        } else if (time == 'first') {
+        } else if (condition == 'first') {
             list = list + itemName.value + '_' + itemQuantity.value + '-'
             addMainCard(itemName.value, itemQuantity.value)
             addItemWindow.remove()  
