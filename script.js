@@ -36,24 +36,40 @@ function add(time) {
     let addItemWindow = document.getElementById('addItemWindow')
     let itemName = document.getElementById('itemName')
     let itemQuantity = document.getElementById('itemQuantity')
-    if (itemName.value == '' || itemQuantity.value == 0) {
-        warning.style.color = 'red'
-    } else if (time == 'first') {
-        list = list + itemName.value + '_' + itemQuantity.value + '-'
-        addMainCard(itemName.value, itemQuantity.value)
-        addItemWindow.remove()  
-        addFirstItem.remove()
+    if (time == 'ThereIsAList') { // If there is a list already
+        addMainCard()
         document.querySelector('.noItems').remove()
-    }
-     else {
-        list = list + itemName.value + '_' + itemQuantity.value + '-'
         let items = document.querySelector('.list-card')
-        items.insertAdjacentHTML('beforeend', `
-        <div class='items'>
-            <p class='item-name'>${itemName.value}</p>
-            <p class='item-quantity'>${itemQuantity.value}</p>
-        </div>
-        `)
+        let listItems = localStorage.LSItems.split('-')
+        listItems.pop() // Delete last garbage element)
+        for (let i = 0; i < localStorage.length; i++) {
+            items.insertAdjacentHTML('beforeend', `
+            <div class='items'>
+                <p class='item-name'>${listItems[0].split('_')[0]/*1º element from the array is the name*/}</p> 
+                <p class='item-quantity'>${listItems[0].split('_')[1]/*2º element from the array is the amount*/}</p>
+            </div>
+            `)
+        }
+    } else { // If there isn't a list
+        if (itemName.value == '' || itemQuantity.value == 0) {
+            warning.style.color = 'red'
+        } else if (time == 'first') {
+            list = list + itemName.value + '_' + itemQuantity.value + '-'
+            addMainCard(itemName.value, itemQuantity.value)
+            addItemWindow.remove()  
+            addFirstItem.remove()
+            document.querySelector('.noItems').remove()
+        }
+         else {
+            list = list + itemName.value + '_' + itemQuantity.value + '-'
+            let items = document.querySelector('.list-card')
+            items.insertAdjacentHTML('beforeend', `
+            <div class='items'>
+                <p class='item-name'>${itemName.value}</p>
+                <p class='item-quantity'>${itemQuantity.value}</p>
+            </div>
+            `)
+        }
     }
     localStorage.setItem('LSItems', list)
 }
