@@ -85,10 +85,11 @@ function addMainCard(item, quantity) {
             <p>Nome do Item</p>
             <p>Quantidade</p>
         </div>
-        <div class='items'>
+        ${item !== undefined || quantity !== undefined ? // If the paramenters are (not) passed 
+        `<div class='items'>
             <p class='item-name'>${item}</p>
             <p class='item-quantity'>${quantity}</p>
-        </div>
+        </div>` : ''/*If not*/}
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='cart-card'>
