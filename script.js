@@ -70,8 +70,8 @@ function add(time) {
             </div>
             `)
         }
+        localStorage.setItem('LSItems', list)
     }
-    localStorage.setItem('LSItems', list)
 }
 function addMainCard(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
