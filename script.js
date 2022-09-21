@@ -42,11 +42,11 @@ function add(condition) {
         let items = document.querySelector('.list-card')
         let listItems = localStorage.LSItems.split('-')
         listItems.pop() // Delete last garbage element)
-        for (let i = 0; i < localStorage.length; i++) {
+        for (let i = 0; i < localStorage.LSItems.split('-').length-1; i++) {
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
-                <p class='item-name'>${listItems[0].split('_')[0]/*1º element from the array is the name*/}</p> 
-                <p class='item-quantity'>${listItems[0].split('_')[1]/*2º element from the array is the amount*/}</p>
+                <p class='item-name'>${listItems[i].split('_')[0]/*1º element from the array is the name*/}</p> 
+                <p class='item-quantity'>${listItems[i].split('_')[1]/*2º element from the array is the amount*/}</p>
             </div>
             `)
         }
