@@ -42,12 +42,15 @@ function add(condition) {
         document.querySelector('.noItems').remove()
         let items = document.querySelector('.list-card')
         for (let i = 0; i < Object.keys(list).length; i++) {
-            items.insertAdjacentHTML('beforeend', `
-            <div class='items'>
-                <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
-                <p class='item-quantity'>${list[`item${i}`][1]/*2º element is the amount*/}</p>
-            </div>
-            `)
+            // If item is deleted it'll ignore it
+            if(list['item' + i][0] !== 'deleted') {
+                items.insertAdjacentHTML('beforeend', `
+                <div class='items'>
+                    <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
+                    <p class='item-quantity'>${list[`item${i}`][1]/*2º element is the amount*/}</p>
+                </div>
+                `)
+            }
         }
     } else { // If there isn't a list
         if (itemName.value == '' || itemQuantity.value == 0) {
@@ -113,4 +116,8 @@ function showListOrCard(show) {
         document.querySelector('.list').style.backgroundColor = 'yellow'
         document.querySelector('.cart').style.backgroundColor = 'transparent'
     }
+}
+function deleteItem(item) {
+    list[`${item}`] = ['deleted', '']
+    localStorage.setItem('LSItems', JSON.stringify(list))
 }
