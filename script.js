@@ -1,7 +1,8 @@
 let addFirstItem = document.getElementById('addFirstItem')
 addFirstItem.addEventListener('click', addItem)
 const mainHTML = document.querySelector('main')
-let list, cart = localStorage.LSItems == undefined ? '' : localStorage.LSItems
+let list = {}
+let cart = {}
 function main() {
     if(localStorage.length > 0) {
         addFirstItem.remove()
@@ -36,16 +37,15 @@ function add(condition) {
     let itemName = document.getElementById('itemName')
     let itemQuantity = document.getElementById('itemQuantity')
     if (condition == 'ThereIsAList') { // If there is a list already
+        list = JSON.parse(localStorage.LSItems) // Make list a object again
         addMainCard()
         document.querySelector('.noItems').remove()
         let items = document.querySelector('.list-card')
-        let listItems = localStorage.LSItems.split('-')
-        listItems.pop() // Delete last garbage element)
-        for (let i = 0; i < localStorage.LSItems.split('-').length-1; i++) {
+        for (let i = 0; i < Object.keys(list).length; i++) {
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
-                <p class='item-name'>${listItems[i].split('_')[0]/*1º element from the array is the name*/}</p> 
-                <p class='item-quantity'>${listItems[i].split('_')[1]/*2º element from the array is the amount*/}</p>
+                <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
+                <p class='item-quantity'>${list[`item${i}`][1]/*2º element is the amount*/}</p>
             </div>
             `)
         }
@@ -53,14 +53,14 @@ function add(condition) {
         if (itemName.value == '' || itemQuantity.value == 0) {
             warning.style.color = 'red'
         } else if (condition == 'first') {
-            list = list + itemName.value + '_' + itemQuantity.value + '-'
+            list[`item${Object.keys(list).length}`] = [itemName.value, itemQuantity.value]
             addMainCard(itemName.value, itemQuantity.value)
             addItemWindow.remove()  
             addFirstItem.remove()
             document.querySelector('.noItems').remove()
         }
          else {
-            list = list + itemName.value + '_' + itemQuantity.value + '-'
+            list[`item${Object.keys(list).length}`] = [itemName.value, itemQuantity.value]
             let items = document.querySelector('.list-card')
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
@@ -69,7 +69,7 @@ function add(condition) {
             </div>
             `)
         }
-        localStorage.setItem('LSItems', list)
+        localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
     }
 }
 function addMainCard(item, quantity) {
