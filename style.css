@@ -158,3 +158,16 @@ p.item-name {
     width: 100vw;
     height: 100vh;
 }
+.toCartDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 200px;
+    background-color: white;
+    border: 2px gray solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
