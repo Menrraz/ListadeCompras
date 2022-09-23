@@ -122,3 +122,18 @@ function deleteItem(item) {
     document.querySelector(`.${item}`).remove()
     localStorage.setItem('LSItems', JSON.stringify(list))
 }
+function addToCartDiv(item, quantity) {
+    mainHTML.insertAdjacentHTML('beforeend', `
+    <div class='overlay-background'>
+        <div class='toCartDiv'>
+            <label>Quantidade:</label>
+            <input type='number' value='${quantity}' placeholder='Quantos?'>
+            <label>Quanto custou?</label>
+            <input type='number' value='' placeholder='$1.25' autofocus>
+            <p>SE O PRODUTO FOR MEDIDO EM QUILO COLOQUE O PREÇO DE <span>1 QUILO<span>.</p>
+            <input type='button' value='Para o Carrinho'>
+        </div>
+    </div>
+    `)
+    document.querySelector('.overlay-background').style.display = 'flex'
+}
