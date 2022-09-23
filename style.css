@@ -149,3 +149,12 @@ p.item-name {
     width: 165px;
     word-break: break-all;
 }
+.overlay-background {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100vw;
+    height: 100vh;
+}
