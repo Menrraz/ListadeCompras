@@ -171,3 +171,8 @@ p.item-name {
     text-align: center;
     font-size: 18px;
 }
+.toCartDiv input[type='number'] {
+    display: block;
+    height: 25px;
+    text-align: center;
+}
