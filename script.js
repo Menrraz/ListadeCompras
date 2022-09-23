@@ -119,5 +119,6 @@ function showListOrCard(show) {
 }
 function deleteItem(item) {
     list[`${item}`] = ['deleted', '']
+    document.querySelector(`.${item}`).remove()
     localStorage.setItem('LSItems', JSON.stringify(list))
 }
