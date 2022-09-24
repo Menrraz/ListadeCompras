@@ -181,6 +181,12 @@ p.item-name {
     color: rgb(36, 36, 36);
     margin: 10px 0 0 0;
 }
+.toCartDiv .second-warning {
+    font-size: 12px;
+    color: transparent;
+    font-weight: bold;
+    margin: 2px 0 0 0;
+}
 .toCartDiv input[type='button'] {
     font-size: 18px;
     width: 173px;
