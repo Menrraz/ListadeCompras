@@ -40,10 +40,11 @@ function add(condition) {
         list = JSON.parse(localStorage.LSItems) // Make list a object again
         addMainCard()
         document.querySelector('.noItems').remove()
+        // List
         let items = document.querySelector('.list-card')
         for (let i = 0; i < Object.keys(list).length; i++) {
-            // If item is deleted it'll ignore it
-            if(list['item' + i][0] !== 'deleted') {
+            // If item is deleted or the third item is a number, in the case it's on cart
+            if(list['item' + i][0] !== 'deleted' && typeof list['item' + i][2] !== 'number') {
                 items.insertAdjacentHTML('beforeend', `
                 <div class='items'>
                     <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
