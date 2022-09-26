@@ -142,13 +142,12 @@ function toCart(item) {
     let price = document.querySelector('#price')
     let quantity = document.querySelector('#quantity')
     if (quantity.value >= 0 || price.value >= 0) {
-        list[item].push(parseFloat(price.value))
-        list[item][1] = quantity.value // If there is a new amount
-        // localStorage.setItem('LsIItems', JSON.stringify(list))
-        console.log(list[item])
-    } else {
         document.querySelector('.second-warning').style.color = 'red'
         console.log('valores inválidos')
+    } else {
+        list[item].push(parseFloat(price.value))
+        list[item][1] = quantity.value // In the case of a new amount
+        localStorage.setItem('LsIItems', JSON.stringify(list))
     }
 
 }
