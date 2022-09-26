@@ -52,6 +52,21 @@ function add(condition) {
                 `)
             }
         }
+        // Cart
+        document.querySelector('.noItems').remove()
+        let cart = document.querySelector('.cart-card')
+        for (let i = 0; i < Object.keys(list).length; i++) {
+            // If item have a third element, so it's on cart
+            if (list['item' + i][2] !== undefined) {
+                cart.insertAdjacentHTML('beforeend', `
+                <div class='items item${i}'>
+                    <p class='item-name'>${list[`item${i}`][0]}</p>
+                    <p class='item-quantity'>${list[`item${i}`][1]}</p>
+                    <p class='item-price'>$${list[`item${i}`][2]/*3º element is the price*/}</p>
+                </div>
+                `)
+            }
+        }
     } else { // If there isn't a list
         if (itemName.value == '' || itemQuantity.value == 0) {
             warning.style.color = 'red'
