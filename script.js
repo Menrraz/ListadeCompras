@@ -141,7 +141,7 @@ function addToCartDiv(item, quantity) {
 function toCart(item) {
     let price = document.querySelector('#price')
     let quantity = document.querySelector('#quantity')
-    if (quantity.value >= 0 || price.value >= 0) {
+    if (quantity.value <= 0 || price.value <= 0) {
         document.querySelector('.second-warning').style.color = 'red'
         console.log('valores inválidos')
     } else {
