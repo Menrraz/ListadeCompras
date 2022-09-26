@@ -100,7 +100,7 @@ function addMainCard(item, quantity) {
     </div>
     <div class='list-card'>
         <div class='list-card-header'>
-            <p>Nome do Item</p>
+            <p>Item</p>
             <p>Quantidade</p>
         </div>
         ${item !== undefined || quantity !== undefined ? // If the paramenters are (not) passed 
@@ -112,7 +112,7 @@ function addMainCard(item, quantity) {
     </div>
     <div class='cart-card'>
         <div class='cart-card-header'>
-            <p>Nome do Item</p>
+            <p>Item</p>
             <p>Quantidade</p>
             <p>Preço</p>
         </div>
