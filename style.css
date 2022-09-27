@@ -155,6 +155,18 @@ p.noItems {
 p.item-name {
     width: 120px;
 }
+.div-price {
+    text-align: right;
+    width: 95px;
+}
+.div-price .item-price {
+    color: green;
+    font-weight: bold;
+}
+.div-price .item-price-unity {
+    font-size: 13px;
+    color: #404040;
+}
 .overlay-background {
     display: none;
     align-items: center;
