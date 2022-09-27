@@ -67,7 +67,10 @@ function add(condition) {
                 <div class='items item${i}'>
                     <p class='item-name'>${list[`item${i}`][0]}</p>
                     <p class='item-quantity'>${list[`item${i}`][1]}</p>
-                    <p class='item-price'>$${list[`item${i}`][2].toFixed(2)/*3º element is the price*/}</p>
+                    <div class='div-price'>
+                        <p class='item-price'>$${list[`item${i}`][2].toFixed(2)/*3º element is the price*/}</p>
+                        <p class='item-price-unity'>${(list[`item${i}`][2]/list[`item${i}`][1]).toFixed(2)}</p>
+                    </div>
                 </div>
                 `)
             }
