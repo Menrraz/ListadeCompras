@@ -167,6 +167,12 @@ p.item-name {
     font-size: 13px;
     color: #404040;
 }
+.div-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+}
 .overlay-background {
     display: none;
     align-items: center;
