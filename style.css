@@ -151,6 +151,7 @@ p.noItems {
     background-color: rgb(220, 220, 220);
     padding: 3px;
     margin: 3px;
+    border-bottom: 1px solid gray;
 }
 p.item-name {
     width: 120px;
