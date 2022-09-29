@@ -76,6 +76,7 @@ function add(condition) {
             }
         }
     } else { // If there isn't a list
+        let quantitySelect = document.getElementById('quantitySelect')
         if (itemName.value == '' || itemQuantity.value == 0) {
             warning.style.color = 'red'
         } else if (condition == 'first') {
