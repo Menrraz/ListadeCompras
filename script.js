@@ -171,8 +171,8 @@ function toCart(item) {
         document.querySelector('.second-warning').style.color = 'red'
         console.log('valores inválidos')
     } else {
-        list[item].push(parseFloat(price.value))
-        list[item][1] = quantity.value // In the case of a new amount
+        list[item].push(parseFloat(price.value*list[item][1][0]))
+        list[item][1] = [quantity.value, list[item][1][1]] // In the case of a new amount
         localStorage.setItem('LsIItems', JSON.stringify(list))
     }
 
