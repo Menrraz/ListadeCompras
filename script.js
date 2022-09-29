@@ -48,7 +48,7 @@ function add(condition) {
                 items.insertAdjacentHTML('beforeend', `
                 <div class='items'>
                     <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
-                    <p class='item-quantity'>${list[`item${i}`][1]/*2º element is the amount*/}</p>
+                    <p class='item-quantity'>${list[`item${i}`][1][0]+list[`item${i}`][1][1]/*2º element is the amount*/}</p>
                     <div class='div-icons'>
                         <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${i}', ${list[`item${i}`][1]})"></i>
                         <i class="fas fa-trash-alt icon" onclick="deleteItem('${'item' + i}')"></i>
@@ -66,7 +66,7 @@ function add(condition) {
                 cart.insertAdjacentHTML('beforeend', `
                 <div class='items item${i}'>
                     <p class='item-name'>${list[`item${i}`][0]}</p>
-                    <p class='item-quantity'>${list[`item${i}`][1]}</p>
+                    <p class='item-quantity'>${list[`item${i}`][1][0]+list[`item${i}`][1][1]}</p>
                     <div class='div-price'>
                         <p class='item-price'>$${list[`item${i}`][2].toFixed(2)/*3º element is the price*/}</p>
                         <p class='item-price-unity'>${(list[`item${i}`][2]/list[`item${i}`][1]).toFixed(2)}</p>
