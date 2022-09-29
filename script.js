@@ -79,14 +79,16 @@ function add(condition) {
         if (itemName.value == '' || itemQuantity.value == 0) {
             warning.style.color = 'red'
         } else if (condition == 'first') {
-            list[`item${Object.keys(list).length}`] = [itemName.value, itemQuantity.value]
+            list[`item${Object.keys(list).length}`] = [itemName.value, [itemQuantity.value]]
+            if (quantitySelect.value == 'kg') {list[`item${(Object.keys(list).length-1)}`][1].push('kg')}
             addMainCard(itemName.value, itemQuantity.value)
             addItemWindow.remove()  
             addFirstItem.remove()
             document.querySelector('.noItems').remove()
         }
          else {
-            list[`item${Object.keys(list).length}`] = [itemName.value, itemQuantity.value]
+            list[`item${Object.keys(list).length}`] = [itemName.value, [itemQuantity.value]]
+            if (quantitySelect.value == 'kg') {list[`item${(Object.keys(list).length-1)}`][1].push('kg')}
             let items = document.querySelector('.list-card')
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
