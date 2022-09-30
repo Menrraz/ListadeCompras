@@ -69,7 +69,7 @@ function add(condition) {
                     <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')}</p>
                     <div class='div-price'>
                         <p class='item-price'>$${(list[`item${i}`][2]*list[`item${i}`][1][0]).toFixed(2)/*3º element is the price*/}</p>
-                        <p class='item-price-unity'>${(list[`item${i}`][2]/list[`item${i}`][1][0]).toFixed(2)}</p>
+                        <p class='item-price-unity'>${(list[`item${i}`][2]).toFixed(2)}</p>
                     </div>
                 </div>
                 `)
@@ -175,7 +175,7 @@ function toCart(item) {
         document.querySelector('.second-warning').style.color = 'red'
         console.log('valores inválidos')
     } else {
-        list[item].push(parseFloat(price.value*list[item][1][0]))
+        list[item].push(parseFloat(price.value))
         list[item][1] = [quantity.value, list[item][1][1]] // In the case of a new amount
         localStorage.setItem('LsIItems', JSON.stringify(list))
     }
