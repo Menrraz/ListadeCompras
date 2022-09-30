@@ -121,10 +121,12 @@ img {
 .list-card {
     height: 100%;
     display: block;
+    overflow: auto;
 }
 .cart-card {
     height: 100%;
     display: none;
+    overflow: auto;
 }
 .list-card-header, .cart-card-header {
     display: flex;
