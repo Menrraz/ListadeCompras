@@ -46,7 +46,7 @@ function add(condition) {
             // If item is deleted or the third item is a number, in the case it's on cart
             if(list['item' + i][0] !== 'deleted' && typeof list['item' + i][2] !== 'number') {
                 items.insertAdjacentHTML('beforeend', `
-                <div class='items'>
+                <div class='items item${i}'>
                     <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
                     <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')/*2º element is the amount*/}</p>
                     <div class='div-icons'>
