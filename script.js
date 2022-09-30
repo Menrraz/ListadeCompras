@@ -128,6 +128,10 @@ function addMainCard(item, quantity) {
         </div>
         <p class='noItems'>Sem itens</p>
     </div>
+    <div class='total'>
+        <p class='total-p-item'>Item: 0/0</p>
+        <p class='total-p-total'>Total: $0,00</p>
+    </div>
 </section>`)
 }
 function showListOrCard(show) {
