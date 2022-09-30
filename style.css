@@ -220,3 +220,10 @@ p.item-name {
     height: 35px;
     margin: 10px 0 0 0;
 }
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-top: 2px solid gray;
+}
