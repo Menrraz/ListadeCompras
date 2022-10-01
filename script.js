@@ -181,3 +181,16 @@ function toCart(item) {
     }
 
 }
+function writeTotal() {
+    let listAmount = 0
+    let cartAmount = 0
+    let price = 0
+    for (let i = 0; i < Object.keys(list).length; i++) {
+        listAmount++
+        list[`item${i}`][2] == undefined ? '': cartAmount++
+        if (typeof(list[`item${i}`][2]) == 'number') {
+            price = price+(list[`item${i}`][1][0]*list[`item${i}`][2])
+        }
+    }
+    return {listAmount: listAmount, cartAmount: cartAmount, price: price.toFixed(2)}
+}
