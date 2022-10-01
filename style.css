@@ -227,3 +227,7 @@ p.item-name {
     padding: 5px;
     border-top: 2px solid gray;
 }
+.total-p-price {
+    color: green;
+    font-weight: bold;
+}
