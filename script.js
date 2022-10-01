@@ -129,8 +129,8 @@ function addMainCard(item, quantity) {
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='total'>
-        <p class='total-p-item'>Item: 0/0</p>
-        <p class='total-p-total'>Total: $0,00</p>
+        <p class='total-p-item'>Item: ${writeTotal().cartAmount}/${writeTotal().listAmount}</p>
+        <p class='total-p-total'>Total: <span class='total-p-price'>$${writeTotal().price}</p>
     </div>
 </section>`)
 }
