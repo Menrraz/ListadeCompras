@@ -157,9 +157,9 @@ function addToCartDiv(item, quantity) {
     <div class='overlay-background'>
         <div class='toCartDiv'>
             <label>Quantidade:</label>
-            <input type='number' value='${quantity}' placeholder='Quantos?'>
+            <input type='number' value='${quantity}' id="quantity" placeholder='Quantos?'>
             <label>Quanto custou?</label>
-            <input type='number' value='' placeholder='$1.25' autofocus>
+            <input type='number' value='' id='price' placeholder='$1.25' autofocus>
             <p class='first-warning'>SE O PRODUTO FOR MEDIDO EM QUILO COLOQUE O PREÇO DE <span>1 QUILO<span>.</p>
             <p class='second-warning'>Valores inválidos</p>
             <input type='button' value='Para o Carrinho' onclick="toCart('${item}')">
