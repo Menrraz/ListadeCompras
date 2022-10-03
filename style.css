@@ -150,6 +150,7 @@ p.noItems {
 .items {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(220, 220, 220);
     padding: 3px;
     margin: 3px;
