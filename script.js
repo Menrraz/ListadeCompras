@@ -14,7 +14,7 @@ function addItem() {
     `<div id='addItemWindow'>
         ${addDivItemWindow('first')}
     </div>`)
-    const addItemWindow = document.getElementById('addItemWindow').style.display = 'block'
+    document.getElementById('addItemWindow').style.display = 'block'
     
 }
 function addDivItemWindow(condition) {
