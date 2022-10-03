@@ -23,7 +23,7 @@ function addDivItemWindow(condition) {
         <label>Adicione um item</label>
         <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico'>
         <label>Quantidade</label>
-        <select>
+        <select id='quantitySelect'>
             <option value="unity">Unidade</option>
             <option value="kg">Quilo</option>
         </select>
