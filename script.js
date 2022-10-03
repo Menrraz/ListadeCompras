@@ -194,3 +194,4 @@ function writeTotal() {
     }
     return {listAmount: listAmount, cartAmount: cartAmount, price: price.toFixed(2)}
 }
+main()
