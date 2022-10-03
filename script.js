@@ -177,7 +177,7 @@ function toCart(item) {
     } else {
         list[item].push(parseFloat(price.value))
         list[item][1] = [quantity.value, list[item][1][1]] // In the case of a new amount
-        localStorage.setItem('LsIItems', JSON.stringify(list))
+        localStorage.setItem('LSItems', JSON.stringify(list))
     }
 
 }
