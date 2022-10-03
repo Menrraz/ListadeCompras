@@ -111,6 +111,9 @@ img {
     border-bottom: 1px solid black;
     cursor: pointer;
 }
+.main-card .main-card-header {
+    border-top: 1px solid gray;
+}
 .main-card .list {
     background-color: yellow;
 }
