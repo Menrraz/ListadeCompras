@@ -162,7 +162,7 @@ function addToCartDiv(item, quantity) {
             <input type='number' value='' placeholder='$1.25' autofocus>
             <p class='first-warning'>SE O PRODUTO FOR MEDIDO EM QUILO COLOQUE O PREÇO DE <span>1 QUILO<span>.</p>
             <p class='second-warning'>Valores inválidos</p>
-            <input type='button' value='Para o Carrinho' onclick="toCart('${item}')>
+            <input type='button' value='Para o Carrinho' onclick="toCart('${item}')">
         </div>
     </div>
     `)
