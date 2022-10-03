@@ -143,8 +143,8 @@ function showListOrCard(show) {
     } else { // if 'cart'
         document.querySelector('.cart-card').style.display = 'block'
         document.querySelector('.list-card').style.display = 'none'
-        document.querySelector('.list').style.backgroundColor = 'yellow'
-        document.querySelector('.cart').style.backgroundColor = 'transparent'
+        document.querySelector('.list').style.backgroundColor = 'transparent'
+        document.querySelector('.cart').style.backgroundColor = 'yellow'
     }
 }
 function deleteItem(item) {
