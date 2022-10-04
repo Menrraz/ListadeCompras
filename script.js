@@ -82,7 +82,7 @@ function add(condition) {
         } else if (condition == 'first') {
             list[`item${Object.keys(list).length}`] = [itemName.value, [itemQuantity.value]]
             if (quantitySelect.value == 'kg') {list[`item${(Object.keys(list).length-1)}`][1].push('kg')}
-            addMainCard(itemName.value, itemQuantity.value)
+            addMainCard(`item${Object.keys(list).length-1}`)
             addItemWindow.remove()  
             addFirstItem.remove()
             document.querySelector('.noItems').remove()
@@ -101,7 +101,7 @@ function add(condition) {
         localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
     }
 }
-function addMainCard(item, quantity) {
+function addMainCard(item) {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
     ${addDivItemWindow()}
     <div class='main-card-header'>
