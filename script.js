@@ -132,6 +132,9 @@ function addMainCard(item, quantity) {
         <p class='total-p-item'>Item: ${writeTotal().cartAmount}/${writeTotal().listAmount}</p>
         <p class='total-p-total'>Total: <span class='total-p-price'>$${writeTotal().price}</p>
     </div>
+    <div class='end'>
+        <input type='button' value='Finalizar Compras' onclick="localStorage.clear(), window.location.reload()">
+    </div>
 </section>`)
 }
 function showListOrCard(show) {
