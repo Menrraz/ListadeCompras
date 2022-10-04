@@ -235,3 +235,9 @@ p.item-name {
     color: green;
     font-weight: bold;
 }
+.end {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid gray;
+    padding: 10px;
+}
