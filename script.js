@@ -117,6 +117,10 @@ function addMainCard(item) {
         `<div class='items'>
             <p class='item-name'>${item}</p>
             <p class='item-quantity'>${quantity}</p>
+            <div class='div-icons'>
+                <i class="fas fa-shopping-cart" onclick="addToCartDiv('${item}', ${list[item][1][0]})"></i>
+                <i class="fas fa-trash-alt icon" onclick="deleteItem('${item}')"></i>
+            </div>
         </div>` : ''/*If not*/}
         <p class='noItems'>Sem itens</p>
     </div>
