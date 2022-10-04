@@ -241,3 +241,10 @@ p.item-name {
     border-top: 2px solid gray;
     padding: 10px;
 }
+.end input {
+    font-size: 20px;
+    padding: 5px;
+    width: 95%;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
