@@ -116,10 +116,10 @@ function addMainCard(item) {
             <p>Item</p>
             <p>Quantidade</p>
         </div>
-        ${item !== undefined || quantity !== undefined ? // If the paramenters are (not) passed 
+        ${item !== undefined ? // If the paramenter is (not) passed 
         `<div class='items'>
-            <p class='item-name'>${item}</p>
-            <p class='item-quantity'>${quantity}</p>
+            <p class='item-name'>${list[item][0]}</p>
+            <p class='item-quantity'>${list[item][1][0]}</p>
             <div class='div-icons'>
                 <i class="fas fa-shopping-cart" onclick="addToCartDiv('${item}', ${list[item][1][0]})"></i>
                 <i class="fas fa-trash-alt icon" onclick="deleteItem('${item}')"></i>
