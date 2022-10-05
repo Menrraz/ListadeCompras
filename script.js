@@ -2,7 +2,6 @@ let addFirstItem = document.getElementById('addFirstItem')
 addFirstItem.addEventListener('click', addItem)
 const mainHTML = document.querySelector('main')
 let list = {}
-let cart = {}
 function main() {
     if(localStorage.length > 0) {
         addFirstItem.remove()
