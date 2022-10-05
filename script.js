@@ -94,6 +94,10 @@ function add(condition) {
             <div class='items'>
                 <p class='item-name'>${itemName.value}</p>
                 <p class='item-quantity'>${itemQuantity.value}</p>
+                <div class='div-icons'>
+                    <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${Object.keys(list).length-1}', '${list[`item${Object.keys(list).length-1}`][1][0]}')"></i>
+                    <i class="fas fa-trash-alt icon" onclick="deleteItem('item${Object.keys(list).length-1}')"></i>
+                </div>
             </div>
             `)
         }
