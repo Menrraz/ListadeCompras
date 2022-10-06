@@ -153,6 +153,8 @@ p.item-name {
 .div-price {
     text-align: right;
     width: 95px;
+    border-right: 1px solid gray;
+    margin-right: 3px;
 }
 .div-price .item-price {
     color: green;
