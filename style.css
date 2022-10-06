@@ -150,6 +150,10 @@ p.noItems {
 p.item-name {
     width: 120px;
 }
+p.item-quantity {
+    width: 60px;
+    border-right: 1px solid gray;
+}
 .div-price {
     text-align: left;
     width: 95px;
