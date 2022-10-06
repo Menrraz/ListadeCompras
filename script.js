@@ -113,10 +113,6 @@ function addMainCard(item) {
         <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
     </div>
     <div class='list-card'>
-        <div class='list-card-header'>
-            <p>Item</p>
-            <p>Quantidade</p>
-        </div>
         ${item !== undefined ? // If the paramenter is (not) passed 
         `<div class='items'>
             <p class='item-name'>${list[item][0]}</p>
@@ -129,11 +125,7 @@ function addMainCard(item) {
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='cart-card'>
-        <div class='cart-card-header'>
-            <p>Item</p>
-            <p>Quantidade</p>
-            <p>Preço</p>
-        </div>
+
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='total'>
