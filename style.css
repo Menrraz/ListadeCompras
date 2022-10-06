@@ -151,7 +151,7 @@ p.item-name {
     width: 120px;
 }
 .div-price {
-    text-align: right;
+    text-align: left;
     width: 95px;
     border-right: 1px solid gray;
     margin-right: 3px;
