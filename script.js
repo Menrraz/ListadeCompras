@@ -195,6 +195,8 @@ function writeTotal() {
             price = price+(list[`item${i}`][1][0]*list[`item${i}`][2])
         }
     }
+    document.querySelector(".total-p-item").innerHTML = `Itens: ${cartAmount}/${listAmount}`
+    document.querySelector(".total-p-price").innerHTML = price.toFixed(2)
     return {listAmount: listAmount, cartAmount: cartAmount, price: price.toFixed(2)}
 }
 main()
