@@ -70,6 +70,7 @@ function add(condition) {
                         <p class='item-price'>$${(list[`item${i}`][2]*list[`item${i}`][1][0]).toFixed(2)/*3º element is the price*/}</p>
                         <p class='item-price-unity'>${(list[`item${i}`][2]).toFixed(2)}</p>
                     </div>
+                    <i class="fas fa-trash-alt icon" onclick="deleteItem('${'item' + i}')"></i>
                 </div>
                 `)
             }
