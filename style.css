@@ -131,18 +131,6 @@ img {
     display: none;
     overflow: auto;
 }
-.list-card-header, .cart-card-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 3px 5px 3px 5px;
-    border-bottom: 1px solid black;
-}
-.list-card-header .p-quantity {
-    width: 85px;
-}
-.cart-card-header p.p-quantity {
-    width: 10px;
-}
 p.noItems {
     height: 92%;
     display: flex;
