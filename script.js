@@ -93,7 +93,7 @@ function add(condition) {
             let items = document.querySelector('.list-card')
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
-                <p class='item-quantity'>${itemQuantity.value}</p>
+                <p class='item-quantity'>${itemQuantity.value+(list[`item${Object.keys(list).length-1}`][1][1]=='kg'?list[`item${Object.keys(list).length-1}`][1][1]:'')}</p>
                 <p class='item-name'>${itemName.value}</p>
                 <div class='div-icons'>
                     <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${Object.keys(list).length-1}', '${list[`item${Object.keys(list).length-1}`][1][0]}')"></i>
