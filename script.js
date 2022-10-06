@@ -46,8 +46,8 @@ function add(condition) {
             if(list['item' + i][0] !== 'deleted' && typeof list['item' + i][2] !== 'number') {
                 items.insertAdjacentHTML('beforeend', `
                 <div class='items item${i}'>
-                    <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
                     <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')/*2º element is the amount*/}</p>
+                    <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
                     <div class='div-icons'>
                         <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${i}',${list[`item${i}`][1][0]})"></i>
                         <i class="fas fa-trash-alt icon" onclick="deleteItem('${'item' + i}')"></i>
@@ -64,8 +64,8 @@ function add(condition) {
             if (list['item' + i][2] !== undefined) {
                 cart.insertAdjacentHTML('beforeend', `
                 <div class='items item${i}'>
-                    <p class='item-name'>${list[`item${i}`][0]}</p>
                     <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')}</p>
+                    <p class='item-name'>${list[`item${i}`][0]}</p>
                     <div class='div-price'>
                         <p class='item-price'>$${(list[`item${i}`][2]*list[`item${i}`][1][0]).toFixed(2)/*3º element is the price*/}</p>
                         <p class='item-price-unity'>${(list[`item${i}`][2]).toFixed(2)}</p>
@@ -93,8 +93,8 @@ function add(condition) {
             let items = document.querySelector('.list-card')
             items.insertAdjacentHTML('beforeend', `
             <div class='items'>
-                <p class='item-name'>${itemName.value}</p>
                 <p class='item-quantity'>${itemQuantity.value}</p>
+                <p class='item-name'>${itemName.value}</p>
                 <div class='div-icons'>
                     <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${Object.keys(list).length-1}', '${list[`item${Object.keys(list).length-1}`][1][0]}')"></i>
                     <i class="fas fa-trash-alt icon" onclick="deleteItem('item${Object.keys(list).length-1}')"></i>
@@ -116,8 +116,8 @@ function addMainCard(item) {
     <div class='list-card'>
         ${item !== undefined ? // If the paramenter is (not) passed 
         `<div class='items'>
-            <p class='item-name'>${list[item][0]}</p>
             <p class='item-quantity'>${list[item][1][0]}</p>
+            <p class='item-name'>${list[item][0]}</p>
             <div class='div-icons'>
                 <i class="fas fa-shopping-cart" onclick="addToCartDiv('${item}', ${list[item][1][0]})"></i>
                 <i class="fas fa-trash-alt icon" onclick="deleteItem('${item}')"></i>
