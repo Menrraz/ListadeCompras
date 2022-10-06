@@ -104,6 +104,7 @@ function add(condition) {
         }
         localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
     }
+    writeTotal()
 }
 function addMainCard(item) {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
@@ -136,6 +137,7 @@ function addMainCard(item) {
         <input type='button' value='Finalizar Compras' onclick="localStorage.clear(), window.location.reload()">
     </div>
 </section>`)
+    writeTotal()
 }
 function showListOrCard(show) {
     if (show == 'list') {
@@ -154,6 +156,7 @@ function deleteItem(item) {
     list[`${item}`] = ['deleted', '']
     document.querySelector(`.${item}`).remove()
     localStorage.setItem('LSItems', JSON.stringify(list))
+    writeTotal()
 }
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
@@ -182,7 +185,7 @@ function toCart(item) {
         list[item][1] = [quantity.value, list[item][1][1]] // In the case of a new amount
         localStorage.setItem('LSItems', JSON.stringify(list))
     }
-
+    writeTotal()
 }
 function writeTotal() {
     let listAmount = 0
