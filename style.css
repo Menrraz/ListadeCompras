@@ -148,7 +148,9 @@ p.noItems {
     border-bottom: 1px solid gray;
 }
 p.item-name {
-    width: 120px;
+    width: 188px;
+    padding-left: 7px;
+    border-right: 1px solid gray;
 }
 p.item-quantity {
     width: 60px;
