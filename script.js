@@ -129,8 +129,8 @@ function addMainCard(item) {
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='total'>
-        <p class='total-p-item'>Item: ${writeTotal().cartAmount}/${writeTotal().listAmount}</p>
-        <p class='total-p-total'>Total: <span class='total-p-price'>$${writeTotal().price}</p>
+        <p class='total-p-item'></p>
+        <p class='total-p-total'>Total: <span class='total-p-price'>$</p>
     </div>
     <div class='end'>
         <input type='button' value='Finalizar Compras' onclick="localStorage.clear(), window.location.reload()">
