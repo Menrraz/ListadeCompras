@@ -164,6 +164,9 @@ function addToCartDiv(item, quantity) {
     document.querySelector('.toCartDiv').remove();
     document.querySelector('.overlay-background').remove()"></div>
     <div class='toCartDiv'>
+        <span class='close' onclick="
+        document.querySelector('.toCartDiv').remove();
+        document.querySelector('.overlay-background').remove()">X</span>
         <label>Quantidade:</label>
         <input type='number' value='${quantity}' id="quantity" placeholder='Quantos?'>
         <label>Quanto custou?</label>
