@@ -197,6 +197,8 @@ p.item-quantity {
     border-radius: 5px;
     text-align: center;
     font-size: 18px;
+    z-index: 1;
+    position: absolute;
 }
 .toCartDiv input[type='number'] {
     display: block;
