@@ -160,7 +160,9 @@ function deleteItem(item) {
 }
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
-    <div class='overlay-background'></div>
+    <div class='overlay-background' onclick="
+    document.querySelector('.toCartDiv').remove();
+    document.querySelector('.overlay-background').remove()"></div>
     <div class='toCartDiv'>
         <label>Quantidade:</label>
         <input type='number' value='${quantity}' id="quantity" placeholder='Quantos?'>
