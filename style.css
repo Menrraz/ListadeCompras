@@ -246,3 +246,11 @@ p.item-quantity {
     border-radius: 10px;
     border: 2px solid gray;
 }
+.close {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 1.5%;
+    left: 94.5%;
+    cursor: pointer;
+}
