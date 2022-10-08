@@ -200,6 +200,9 @@ function writeTotal() {
     for (let i = 0; i < Object.keys(list).length; i++) {
         listAmount++
         list[`item${i}`][2] == undefined ? '': cartAmount++
+        if (list[`item${i}`][0] != 'deleted') {
+            listAmount++
+        }
         if (typeof(list[`item${i}`][2]) == 'number') {
             price = price+(list[`item${i}`][1][0]*list[`item${i}`][2])
         }
