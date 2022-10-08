@@ -198,7 +198,6 @@ function writeTotal() {
     let cartAmount = 0
     let price = 0
     for (let i = 0; i < Object.keys(list).length; i++) {
-        listAmount++
         list[`item${i}`][2] == undefined ? '': cartAmount++
         if (list[`item${i}`][0] != 'deleted') {
             listAmount++
