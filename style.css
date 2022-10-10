@@ -199,6 +199,7 @@ p.item-quantity {
     font-size: 18px;
     z-index: 1;
     position: absolute;
+    box-shadow: 1px 1px 9px 2px #00000033;
 }
 .toCartDiv input[type='number'] {
     display: block;
