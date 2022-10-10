@@ -251,6 +251,10 @@ p.item-quantity {
     border-radius: 10px;
     border: 2px solid gray;
 }
+.end input:hover {
+    background-color: yellow;
+    transform: scale(1.03);
+}
 .close {
     font-size: 12px;
     font-weight: bold;
