@@ -223,6 +223,8 @@ p.item-quantity {
     width: 173px;
     height: 35px;
     margin: 10px 0 0 0;
+    border: 2px solid gray;
+    border-radius: 5px;
 }
 .total {
     display: flex;
