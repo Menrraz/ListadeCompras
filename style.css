@@ -204,6 +204,8 @@ p.item-quantity {
     display: block;
     height: 25px;
     text-align: center;
+    border-radius: 5px;
+    border: 2px solid gray;
 }
 .toCartDiv .first-warning {
     font-size: 11px;
