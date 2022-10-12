@@ -12,8 +12,13 @@ main {
     justify-content: center;
 }
 h1 {
+    border-bottom: 2px solid gray;
+    font-size: 24px; 
+    padding: 4px;
     position: absolute;
+    text-align: center;
     top: 0px;
+    width: 90%;
 }
 img {
     width: 200px;
