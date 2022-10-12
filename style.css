@@ -73,9 +73,11 @@ img {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 88%;
+    height: 92%;
     border: 2px solid gray;
     border-radius: 5px;
+    bottom: 1%;
+    position: absolute;
 }
 .main-card .centralizar {
     display: flex;
