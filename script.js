@@ -53,8 +53,16 @@ function add(where, item) {
             document.querySelector('.noItems').remove()
         }
         if (where == 'list') {
+            list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg']]:[itemName, [quantity]]
+            addItemDiv(where, itemKey, itemName, quantity, qtdSelect, null)
         }
         if (where == 'cart') {
+             // Get the inputs from the toCartDiv
+            itemName = list[item][0]
+            quantity = list[item][1][0]
+            qtdSelect = list[item][1][1]
+            let price = document.querySelector('#price').value
+            addItemDiv(where, item, itemName, quantity, qtdSelect, price)
         }
     }
 }
