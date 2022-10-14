@@ -31,81 +31,19 @@ function addDivItemWindow(condition) {
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
-function add(condition) {
-    let addItemWindow = document.getElementById('addItemWindow')
-    let itemName = document.getElementById('itemName')
-    let itemQuantity = document.getElementById('itemQuantity')
-    if (condition == 'ThereIsAList') { // If there is a list already
-        list = JSON.parse(localStorage.LSItems) // Make list a object again
-        addMainCard()
-        document.querySelector('.noItems').remove()
-        // List
-        let items = document.querySelector('.list-card')
-        for (let i = 0; i < Object.keys(list).length; i++) {
-            // If item is deleted or the third item is a number, in the case it's on cart
-            if(list['item' + i][0] !== 'deleted' && typeof list['item' + i][2] !== 'number') {
-                items.insertAdjacentHTML('beforeend', `
-                <div class='items item${i}'>
-                    <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')/*2º element is the amount*/}</p>
-                    <p class='item-name'>${list[`item${i}`][0]/*1º element is the name*/}</p> 
-                    <div class='div-icons'>
-                        <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${i}',${list[`item${i}`][1][0]})"></i>
-                        <i class="fas fa-trash-alt icon" onclick="deleteItem('${'item' + i}')"></i>
-                    </div>
-                </div>
-                `)
-            }
-        }
-        // Cart
-        document.querySelector('.noItems').remove()
-        let cart = document.querySelector('.cart-card')
-        for (let i = 0; i < Object.keys(list).length; i++) {
-            // If item have a third element, so it's on cart
-            if (list['item' + i][2] !== undefined) {
-                cart.insertAdjacentHTML('beforeend', `
-                <div class='items item${i}'>
-                    <p class='item-quantity'>${list[`item${i}`][1][0]+(list[`item${i}`][1][1]=='kg'?list[`item${i}`][1][1]:'')}</p>
-                    <p class='item-name'>${list[`item${i}`][0]}</p>
-                    <div class='div-price'>
-                        <p class='item-price'>$${(list[`item${i}`][2]*list[`item${i}`][1][0]).toFixed(2)/*3º element is the price*/}</p>
-                        <p class='item-price-unity'>${(list[`item${i}`][2]).toFixed(2)}</p>
-                    </div>
-                    <i class="fas fa-trash-alt icon" onclick="deleteItem('${'item' + i}')"></i>
-                </div>
-                `)
-            }
-        }
-    } else { // If there isn't a list
-        let quantitySelect = document.getElementById('quantitySelect')
-        if (itemName.value == '' || itemQuantity.value == 0) {
-            warning.style.color = 'red'
-        } else if (condition == 'first') {
-            list[`item${Object.keys(list).length}`] = [itemName.value, [itemQuantity.value]]
-            if (quantitySelect.value == 'kg') {list[`item${(Object.keys(list).length-1)}`][1].push('kg')}
-            addMainCard(`item${Object.keys(list).length-1}`)
-            addItemWindow.remove()  
-            addFirstItem.remove()
-            document.querySelector('.noItems').remove()
-        }
-         else {
-            list[`item${Object.keys(list).length}`] = [itemName.value, [itemQuantity.value]]
-            if (quantitySelect.value == 'kg') {list[`item${(Object.keys(list).length-1)}`][1].push('kg')}
-            let items = document.querySelector('.list-card')
-            items.insertAdjacentHTML('beforeend', `
-            <div class='items'>
-                <p class='item-quantity'>${itemQuantity.value+(list[`item${Object.keys(list).length-1}`][1][1]=='kg'?list[`item${Object.keys(list).length-1}`][1][1]:'')}</p>
-                <p class='item-name'>${itemName.value}</p>
-                <div class='div-icons'>
-                    <i class="fas fa-shopping-cart" onclick="addToCartDiv('item${Object.keys(list).length-1}', '${list[`item${Object.keys(list).length-1}`][1][0]}')"></i>
-                    <i class="fas fa-trash-alt icon" onclick="deleteItem('item${Object.keys(list).length-1}')"></i>
-                </div>
-            </div>
-            `)
-        }
-        localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
-    }
-    writeTotal()
+
+function thereIsAListAlready() {
+    
 }
+
+function add(where, item) { 
+
+}
+
+function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
+    
+}
+
 function addMainCard(item) {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
     ${addDivItemWindow()}
