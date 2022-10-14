@@ -70,7 +70,12 @@ function add(where, item) {
 }
 
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
-    
+    // Select and identify where the item will go, cart or list
+    let list = document.querySelector('.list-card')
+    let cart = document.querySelector('.cart-card')
+    let div = where == 'list' ? list : cart
+    qtdSelect = qtdSelect == 'kg' ? 'kg': '' 
+    let priceTotal = price*quantity
 }
 
 function addMainCard(item) {
