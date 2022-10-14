@@ -125,7 +125,7 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
         </div>`)
 }
 
-function addMainCard(item) {
+function addMainCard() {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
     ${addDivItemWindow()}
     <div class='main-card-header'>
@@ -133,19 +133,9 @@ function addMainCard(item) {
         <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
     </div>
     <div class='list-card'>
-        ${item !== undefined ? // If the paramenter is (not) passed 
-        `<div class='items'>
-            <p class='item-quantity'>${list[item][1][0]}</p>
-            <p class='item-name'>${list[item][0]}</p>
-            <div class='div-icons'>
-                <i class="fas fa-shopping-cart" onclick="addToCartDiv('${item}', ${list[item][1][0]})"></i>
-                <i class="fas fa-trash-alt icon" onclick="deleteItem('${item}')"></i>
-            </div>
-        </div>` : ''/*If not*/}
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='cart-card'>
-
         <p class='noItems'>Sem itens</p>
     </div>
     <div class='total'>
