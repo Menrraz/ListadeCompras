@@ -199,6 +199,7 @@ function toCart(item) {
         localStorage.setItem('LSItems', JSON.stringify(list))
         document.querySelector('.toCartDiv').remove()
         document.querySelector('.overlay-background').remove()
+        document.querySelector(`.${item}`).remove()
     }
     writeTotal()
 }
