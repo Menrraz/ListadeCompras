@@ -58,6 +58,7 @@ function thereIsAListAlready() {
             }
         }
     }
+    writeTotal()
 }
 
 function add(where, item) { 
