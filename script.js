@@ -37,6 +37,11 @@ function thereIsAListAlready() {
         addMainCard()
         // There is two of it
         document.querySelector('.noItems').remove();document.querySelector('.noItems').remove()
+        
+        list = JSON.parse(localStorage.LSItems) // Make list a object again
+        let listLength = Object.keys(list).length
+        let listDiv = document.querySelector('.list-card')
+        let cartDiv = document.querySelector('.cart-card')
     }
 }
 
