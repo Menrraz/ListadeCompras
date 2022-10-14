@@ -52,6 +52,10 @@ function add(where, item) {
             document.querySelector('.noItems').remove()
             document.querySelector('.noItems').remove()
         }
+        if (where == 'list') {
+        }
+        if (where == 'cart') {
+        }
     }
 }
 
