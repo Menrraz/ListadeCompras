@@ -49,6 +49,13 @@ function thereIsAListAlready() {
             let quantity = list['item' + i][1][0]
             let qtdSelect = list['item' + i][1][1] == 'kg' ? 'kg': ''
             let price =  typeof list['item' + i][2] == 'number'? list['item' + i][2]: ''
+            // If item is not deleted or if there ins't a price
+            if (list['item' + i][0] !== 'deleted' && typeof list[itemKey][2] !== "number") {
+                addItemDiv('list', itemKey, itemName, quantity, qtdSelect, null)
+            // if there is a price
+            } else if (list['item'+ i][2] !== undefined) {
+                addItemDiv('cart', itemKey, itemName, quantity, qtdSelect, price)
+            }
         }
     }
 }
