@@ -35,6 +35,8 @@ function addDivItemWindow(condition) {
 function thereIsAListAlready() {
     if (localStorage.length > 0) {
         addMainCard()
+        // There is two of it
+        document.querySelector('.noItems').remove();document.querySelector('.noItems').remove()
     }
 }
 
