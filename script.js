@@ -40,9 +40,6 @@ function thereIsAListAlready() {
         
         list = JSON.parse(localStorage.LSItems) // Make list a object again
         let listLength = Object.keys(list).length
-        // Select and identify where the item will go, cart or list
-        let listDiv = document.querySelector('.list-card')
-        let cartDiv = document.querySelector('.cart-card')
         for (let i = 0; i < listLength; i++) {
             let itemKey = 'item' + i
             let itemName = list['item' + i][0]
