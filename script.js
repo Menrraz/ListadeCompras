@@ -65,6 +65,8 @@ function add(where, item) {
             addItemDiv(where, item, itemName, quantity, qtdSelect, price)
         }
     }
+    localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
+    writeTotal()
 }
 
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
