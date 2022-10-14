@@ -33,7 +33,9 @@ function addDivItemWindow(condition) {
 }
 
 function thereIsAListAlready() {
-    
+    if (localStorage.length > 0) {
+        addMainCard()
+    }
 }
 
 function add(where, item) { 
