@@ -76,6 +76,22 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
     let div = where == 'list' ? list : cart
     qtdSelect = qtdSelect == 'kg' ? 'kg': '' 
     let priceTotal = price*quantity
+    
+    function addDivIcons(where) {
+        // It always return the trash icon
+        return `
+        <div class='div-icons'>
+            ${where == 'list' ? `<i class='fas fa-shopping-cart' onclick="addToCartDiv('${itemKey}', '${quantity}')"></i>`:''}
+            <i class="fas fa-trash-alt icon" onclick="deleteItem('${itemKey}')"></i>
+        </div>`
+    }
+    function addDivPrice(where) {
+        return where == 'cart'? `
+        <div class='div-price'>
+            <p class='item-price'>$${priceTotal.toFixed(2)}</p>
+            <p class='item-price-unity'>${Number(price).toFixed(2)}</p>
+        </div>`: ''
+    }
 }
 
 function addMainCard(item) {
