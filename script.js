@@ -43,7 +43,15 @@ function add(where, item) {
     if (itemName == '' || quantity == '') { // If the inputs are empty
         warning.style.color = 'red'
     } else {
-        
+        let itemKey = 'item' + Object.keys(list).length
+        // If there isn't a list already
+        if (localStorage.length == 0) {
+            addMainCard()
+            addFirstItem.remove()
+            document.getElementById('addItemWindow').remove()  
+            document.querySelector('.noItems').remove()
+            document.querySelector('.noItems').remove()
+        }
     }
 }
 
