@@ -192,8 +192,8 @@ function toCart(item) {
     let quantity = document.querySelector('#quantity')
     if (quantity.value <= 0 || price.value <= 0) {
         document.querySelector('.second-warning').style.color = 'red'
-        console.log('valores inválidos')
     } else {
+        add('cart', item)
         list[item].push(parseFloat(price.value))
         list[item][1] = [quantity.value, list[item][1][1]] // In the case of a new amount
         localStorage.setItem('LSItems', JSON.stringify(list))
