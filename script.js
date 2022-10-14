@@ -40,6 +40,11 @@ function add(where, item) {
     let itemName = document.getElementById('itemName').value
     let quantity = document.getElementById('itemQuantity').value
     let qtdSelect = document.getElementById('quantitySelect').value
+    if (itemName == '' || quantity == '') { // If the inputs are empty
+        warning.style.color = 'red'
+    } else {
+        
+    }
 }
 
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
