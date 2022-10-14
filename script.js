@@ -37,7 +37,9 @@ function thereIsAListAlready() {
 }
 
 function add(where, item) { 
-
+    let itemName = document.getElementById('itemName').value
+    let quantity = document.getElementById('itemQuantity').value
+    let qtdSelect = document.getElementById('quantitySelect').value
 }
 
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
