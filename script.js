@@ -92,6 +92,13 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
             <p class='item-price-unity'>${Number(price).toFixed(2)}</p>
         </div>`: ''
     }
+    div.insertAdjacentHTML('beforeend', `
+        <div class='items ${itemKey}'>
+            <p class='item-quantity'>${quantity}${qtdSelect}</p>
+            <p class='item-name'>${itemName}</p>
+            ${addDivPrice(where)}
+            ${addDivIcons(where)}
+        </div>`)
 }
 
 function addMainCard(item) {
