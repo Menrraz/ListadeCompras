@@ -5,7 +5,7 @@ let list = {}
 function main() {
     if(localStorage.length > 0) {
         addFirstItem.remove()
-        add('ThereIsAList')
+        thereIsAListAlready()
     }
 }
 function addItem() {
