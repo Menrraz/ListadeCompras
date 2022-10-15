@@ -11,7 +11,7 @@ function main() {
 function addItem() {
     mainHTML.insertAdjacentHTML('beforeend', 
     `<div id='addItemWindow'>
-        ${addDivItemWindow('first')}
+        ${addDivItemWindow()}
     </div>`)
     document.getElementById('addItemWindow').style.display = 'block'
     
@@ -27,7 +27,7 @@ function addDivItemWindow(condition) {
             <option value="kg">Quilo</option>
         </select>
         <input type="number" name="quantidade" id="itemQuantity" placeholder='Ex.: 3'>
-        <input type="button" value="Adicionar" onclick="add('${condition}')">
+        <input type="button" value="Adicionar" onclick="add('list')">
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
