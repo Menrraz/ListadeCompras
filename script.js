@@ -62,7 +62,8 @@ function add(where, item) {
     let itemName = document.getElementById('itemName').value
     let quantity = document.getElementById('itemQuantity').value
     let qtdSelect = document.getElementById('quantitySelect').value
-    if (itemName == '' || quantity == '') { // If the inputs are empty
+    // If the inputs are empty and it's not toCart() calling
+    if ((itemName == '' || quantity == '') && item == undefined) {
         warning.style.color = 'red'
     } else {
         let itemKey = 'item' + Object.keys(list).length
