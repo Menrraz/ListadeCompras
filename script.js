@@ -81,7 +81,8 @@ function add(where, item) {
         if (where == 'cart') {
              // Get the inputs from the toCartDiv
             itemName = list[item][0]
-            quantity = list[item][1][0]
+            // (Try) - When getting the input form toCartDiv. (Catch) - When thereIsAListAlready calls
+            try {quantity = document.querySelector("#toCartQuantity").value} catch{quantity = list[item][1][0]}
             qtdSelect = list[item][1][1]
             let price = document.querySelector('#price').value
             addItemDiv(where, item, itemName, quantity, qtdSelect, price)
