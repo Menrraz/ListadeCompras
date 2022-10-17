@@ -88,9 +88,9 @@ function add(where, item) {
             let price = document.querySelector('#price').value
             addItemDiv(where, item, itemName, quantity, qtdSelect, price)
         }
+        localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
+        writeTotal()
     }
-    localStorage.setItem('LSItems', JSON.stringify(list)) // Make 'list' a string
-    writeTotal()
 }
 
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
