@@ -175,7 +175,7 @@ function addToCartDiv(item, quantity) {
         document.querySelector('.toCartDiv').remove();
         document.querySelector('.overlay-background').remove()">X</span>
         <label>Quantidade:</label>
-        <input type='number' value='${quantity}' id="quantity" placeholder='Quantos?'>
+        <input type='number' value='${quantity}' id="toCartQuantity" placeholder='Quantos?'>
         <label>Quanto custou?</label>
         <input type='number' value='' id='price' placeholder='$1.25' autofocus>
         <p class='first-warning'>SE O PRODUTO FOR MEDIDO EM QUILO COLOQUE O PREÇO DE <span>1 QUILO<span>.</p>
@@ -187,7 +187,7 @@ function addToCartDiv(item, quantity) {
 }
 function toCart(item) {
     let price = document.querySelector('#price')
-    let quantity = document.querySelector('#quantity')
+    let quantity = document.querySelector('#toCartQuantity')
     if (quantity.value <= 0 || price.value <= 0) {
         document.querySelector('.second-warning').style.color = 'red'
     } else {
