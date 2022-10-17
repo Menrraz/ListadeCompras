@@ -100,6 +100,7 @@ img {
 }
 .main-card .centralizar input[type='button'] {
     margin: 5px 0 0 0;
+    font-size: 25px;
 }
 .main-card .centralizar input[type='button']:hover {
     background-color: yellow;
@@ -107,7 +108,7 @@ img {
     transform: scale(1.03);
 }
 .main-card .centralizar select {
-    font-size: 15px;
+    font-size: 25px;
     width: 95%;
     padding: 4px;
     margin: 0 0 5px 0px;
