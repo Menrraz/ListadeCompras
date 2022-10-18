@@ -223,6 +223,7 @@ p.item-quantity {
     font-size: 10px;
     color: rgb(36, 36, 36);
     margin: 10px 0 0 0;
+    width: 80%;
 }
 .toCartDiv .second-warning {
     font-size: 12px;
