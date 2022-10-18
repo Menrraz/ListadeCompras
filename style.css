@@ -120,6 +120,7 @@ img {
     padding: 5px;
     border-bottom: 1px solid black;
     cursor: pointer;
+    font-size: 25px;
 }
 .main-card .main-card-header {
     border-top: 1px solid gray;
