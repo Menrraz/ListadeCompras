@@ -172,6 +172,7 @@ p.item-quantity {
     width: 58px;
     border-right: 1px solid gray;
     margin-right: 3px;
+    padding-right: 5px;
 }
 .div-price .item-price {
     color: green;
