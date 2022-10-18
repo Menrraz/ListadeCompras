@@ -65,6 +65,7 @@ function add(where, item) {
     // If the inputs are empty and it's not toCart() calling
     if ((itemName == '' || quantity == '') && item == undefined) {
         warning.style.color = 'red'
+        setTimeout(function(){warning.style.color = 'transparent'}, 4000)
     } else {
         let itemKey = 'item' + Object.keys(list).length
         // If there isn't a list already
@@ -192,6 +193,7 @@ function toCart(item) {
     let quantity = document.querySelector('#toCartQuantity')
     if (quantity.value <= 0 || price.value <= 0) {
         document.querySelector('.second-warning').style.color = 'red'
+        setTimeout(function(){document.querySelector('.second-warning').style.color = 'transparent'}, 4000)
     } else {
         add('cart', item)
         list[item].push(parseFloat(price.value))
