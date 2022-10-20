@@ -221,4 +221,15 @@ function writeTotal() {
     document.querySelector(".total-p-item").innerHTML = `Itens: ${cartAmount}/${listAmount}`
     document.querySelector(".total-p-price").innerHTML = price.toFixed(2)
 }
+function confirmDiv() {
+    mainHTML.insertAdjacentHTML("beforeend", `
+    <div class='confirmDiv'>
+        <p>Item deletado <span>DESFAZER</span></p>
+    </div>
+    `)
+    function deleteConfirmDiv() {
+        window.document.querySelector(".confirmDiv").remove()
+    }
+    setTimeout(deleteConfirmDiv, 5000)
+}
 main()
