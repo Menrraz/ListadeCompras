@@ -298,3 +298,9 @@ p.item-quantity {
     font-size: 15px;
     text-align: center;
 }
+.confirmDiv p span {
+    color: #00a1ff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+}
