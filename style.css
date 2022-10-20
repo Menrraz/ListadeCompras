@@ -294,3 +294,7 @@ p.item-quantity {
     justify-content: center;
     color: white;
 }
+.confirmDiv p{
+    font-size: 15px;
+    text-align: center;
+}
