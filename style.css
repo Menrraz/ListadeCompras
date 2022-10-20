@@ -279,3 +279,18 @@ p.item-quantity {
     left: 94.5%;
     cursor: pointer;
 }
+.confirmDiv {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #383838;
+    width: 220px;
+    height: 35px;
+    border: 1px solid black;
+    box-shadow: #0000007a -3px 3px 4px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
