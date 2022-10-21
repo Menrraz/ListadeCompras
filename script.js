@@ -178,8 +178,9 @@ function deleteItem(item) {
     localStorage.setItem('LSItems', JSON.stringify(list))
     writeTotal()
 }
-function undo() {
-    
+function undo(itemName, quantity, qtdSelect, price) {
+    let itemKey = 'item' + Object.keys(list).length
+    let where = typeof price == 'Number' ? 'cart': 'list'
 }
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
