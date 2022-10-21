@@ -166,7 +166,7 @@ function deleteItem(item) {
     function confirmDiv() {
     mainHTML.insertAdjacentHTML("beforeend", `
     <div class='confirmDiv'>
-        <p>Item deletado <span>DESFAZER</span></p>
+        <p>Item deletado <span onclick="ondo()">DESFAZER</span></p>
     </div>
     `)
     function deleteConfirmDiv() {window.document.querySelector(".confirmDiv").remove()}
