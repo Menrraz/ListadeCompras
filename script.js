@@ -178,6 +178,9 @@ function deleteItem(item) {
     localStorage.setItem('LSItems', JSON.stringify(list))
     writeTotal()
 }
+function undo() {
+    
+}
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
     <div class='overlay-background' onclick="
