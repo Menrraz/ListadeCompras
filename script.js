@@ -169,11 +169,10 @@ function deleteItem(item) {
         <p>Item deletado <span>DESFAZER</span></p>
     </div>
     `)
-    function deleteConfirmDiv() {
-        window.document.querySelector(".confirmDiv").remove()
-    }
+    function deleteConfirmDiv() {window.document.querySelector(".confirmDiv").remove()}
     setTimeout(deleteConfirmDiv, 5000)
     }
+    confirmDiv()
     list[`${item}`] = ['deleted', '']
     document.querySelector(`.${item}`).remove()
     localStorage.setItem('LSItems', JSON.stringify(list))
