@@ -168,7 +168,7 @@ function deleteItem(item) {
         let timeId = setTimeout(deleteDiv, 9500)
         mainHTML.insertAdjacentHTML("beforeend", `
         <div class='confirmDiv'>
-            <p>Item deletado <span onclick="ondo()">DESFAZER</span></p>
+            <p>Item deletado <span onclick="ondo(${timeId}, '${list[item][0]}', '${list[item][1][0]}', '${list[item][1][1]}', ${list[item][2]})">DESFAZER</span></p>
         </div>
         `)
     }
@@ -178,7 +178,8 @@ function deleteItem(item) {
     localStorage.setItem('LSItems', JSON.stringify(list))
     writeTotal()
 }
-function undo(itemName, quantity, qtdSelect, price) {
+function undo(timeId, itemName, quantity, qtdSelect, price) {
+    clearTimeout(timeId)
     let itemKey = 'item' + Object.keys(list).length
     let where = typeof price == 'Number' ? 'cart': 'list'
 }
