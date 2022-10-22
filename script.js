@@ -180,6 +180,7 @@ function deleteItem(item) {
 }
 function undo(timeId, itemName, quantity, qtdSelect, price) {
     clearTimeout(timeId)
+    document.querySelector('.confirmDiv').remove()
     let itemKey = 'item' + Object.keys(list).length
     let where = typeof price == 'Number' ? 'cart': 'list'
 }
