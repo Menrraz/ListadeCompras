@@ -182,7 +182,7 @@ function undo(timeId, itemName, quantity, qtdSelect, price) {
     clearTimeout(timeId)
     document.querySelector('.confirmDiv').remove()
     let itemKey = 'item' + Object.keys(list).length
-    let where = typeof price == 'Number' ? 'cart': 'list'
+    let where = typeof price == 'number' ? 'cart': 'list'
     if (where == 'list') {
         list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg']] : [itemName, [quantity]]
         addItemDiv(where, itemKey, itemName, quantity, qtdSelect, null)
