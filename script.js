@@ -190,6 +190,8 @@ function undo(timeId, itemName, quantity, qtdSelect, price) {
         list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg'], price] : [itemName, [quantity], price]
         addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price)
     }
+    localStorage.setItem('LSItems', JSON.stringify(list))
+    writeTotal()
 }
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
