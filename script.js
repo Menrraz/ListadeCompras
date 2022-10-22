@@ -183,6 +183,13 @@ function undo(timeId, itemName, quantity, qtdSelect, price) {
     document.querySelector('.confirmDiv').remove()
     let itemKey = 'item' + Object.keys(list).length
     let where = typeof price == 'Number' ? 'cart': 'list'
+    if (where == 'list') {
+        list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg']] : [itemName, [quantity]]
+        addItemDiv(where, itemKey, itemName, quantity, qtdSelect, null)
+    } else { // if 'cart
+        list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg'], price] : [itemName, [quantity], price]
+        addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price)
+    }
 }
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
