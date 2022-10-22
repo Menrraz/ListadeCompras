@@ -165,13 +165,12 @@ function showListOrCard(show) {
 function deleteItem(item) {
     function deleteDiv(){window.document.querySelector(".confirmDiv").remove()}
     function confirmDiv() {
-    mainHTML.insertAdjacentHTML("beforeend", `
-    <div class='confirmDiv'>
-        <p>Item deletado <span onclick="ondo()">DESFAZER</span></p>
-    </div>
-    `)
-    function deleteConfirmDiv() {window.document.querySelector(".confirmDiv").remove()}
-    setTimeout(deleteConfirmDiv, 5000)
+        let timeId = setTimeout(deleteDiv, 9500)
+        mainHTML.insertAdjacentHTML("beforeend", `
+        <div class='confirmDiv'>
+            <p>Item deletado <span onclick="ondo()">DESFAZER</span></p>
+        </div>
+        `)
     }
     confirmDiv()
     list[`${item}`] = ['deleted', '']
