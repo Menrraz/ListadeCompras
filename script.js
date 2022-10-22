@@ -163,6 +163,7 @@ function showListOrCard(show) {
     }
 }
 function deleteItem(item) {
+    function deleteDiv(){window.document.querySelector(".confirmDiv").remove()}
     function confirmDiv() {
     mainHTML.insertAdjacentHTML("beforeend", `
     <div class='confirmDiv'>
