@@ -282,10 +282,10 @@ p.item-quantity {
 .confirmDiv {
     display: flex;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 10px;
+    left: 10px;
     background-color: #383838;
-    width: 220px;
+    width: 250px;
     height: 35px;
     border: 1px solid black;
     box-shadow: #0000007a -3px 3px 4px;
