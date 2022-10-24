@@ -163,6 +163,7 @@ function showListOrCard(show) {
     }
 }
 function deleteItem(item) {
+    try{ deleteDiv() }catch{} // It delete the previous confirmDiv if there is one
     // Catch the deleted item name and return a truncated version if needed 
     let itemTruncated = list[item][0].length > 11 ? list[item][0].slice(0, 12) + "...": list[item][0] 
     function deleteDiv(){window.document.querySelector(".confirmDiv").remove()}
