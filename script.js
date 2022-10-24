@@ -171,7 +171,7 @@ function deleteItem(item) {
         let timeId = setTimeout(deleteDiv, 3500)
         mainHTML.insertAdjacentHTML("beforeend", `
         <div class='confirmDiv'>
-            <p>${itemTruncated} deletado <span onclick="ondo(${timeId}, '${list[item][0]}', '${list[item][1][0]}', '${list[item][1][1]}', ${list[item][2]})">DESFAZER</span></p>
+            <p>${itemTruncated} deletado <span onclick="undo(${timeId}, '${list[item][0]}', '${list[item][1][0]}', '${list[item][1][1]}', ${list[item][2]})">DESFAZER</span></p>
         </div>
         `)
     }
