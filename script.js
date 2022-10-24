@@ -163,12 +163,14 @@ function showListOrCard(show) {
     }
 }
 function deleteItem(item) {
+    // Catch the deleted item name and return a truncated version if needed 
+    let itemTruncated = list[item][0].length > 11 ? list[item][0].slice(0, 12) + "...": list[item][0] 
     function deleteDiv(){window.document.querySelector(".confirmDiv").remove()}
     function confirmDiv() {
         let timeId = setTimeout(deleteDiv, 5000)
         mainHTML.insertAdjacentHTML("beforeend", `
         <div class='confirmDiv'>
-            <p>Item deletado <span onclick="ondo(${timeId}, '${list[item][0]}', '${list[item][1][0]}', '${list[item][1][1]}', ${list[item][2]})">DESFAZER</span></p>
+            <p>${itemTruncated} deletado <span onclick="ondo(${timeId}, '${list[item][0]}', '${list[item][1][0]}', '${list[item][1][1]}', ${list[item][2]})">DESFAZER</span></p>
         </div>
         `)
     }
