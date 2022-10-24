@@ -159,7 +159,7 @@ p.noItems {
     border-bottom: 1px solid gray;
 }
 p.item-name {
-    width: 160px;
+    width: 100%;
     padding-left: 7px;
 }
 p.item-quantity {
