@@ -202,13 +202,12 @@ p.item-quantity {
     cursor: pointer;
 }
 .overlay-background {
-    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.637);
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     z-index: 0;
 }
 .toCartDiv {
