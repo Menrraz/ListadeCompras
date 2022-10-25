@@ -80,7 +80,6 @@ function add(where, item) {
         if (localStorage.length == 0) {
             addMainCard()
             addFirstItem.remove()
-            document.getElementById('addItemWindow').remove()  
             document.querySelector('.noItems').remove()
             document.querySelector('.noItems').remove()
         }
