@@ -141,13 +141,6 @@ img {
     display: none;
     overflow: auto;
 }
-p.noItems {
-    height: 92%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-}
 .items {
     display: flex;
     justify-content: space-between;
