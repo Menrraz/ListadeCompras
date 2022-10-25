@@ -146,6 +146,7 @@ function addMainCard() {
     <div class='end'>
         <input type='button' value='Finalizar Compras' onclick="localStorage.clear(), window.location.reload()">
     </div>
+    <div class='addItem' onclick='addItem()'>+</div>
 </section>`)
     writeTotal()
 }
