@@ -59,9 +59,12 @@ function thereIsAListAlready() {
 }
 
 function add(where, item) { 
-    let itemName = document.getElementById('itemName').value
-    let quantity = document.getElementById('itemQuantity').value
-    let qtdSelect = document.getElementById('quantitySelect').value
+   let [itemName, quantity, qtdSelect] = ''
+    try { // It's inside try because sometimes these values won't be available
+        itemName = document.getElementById('itemName').value
+        quantity = document.getElementById('itemQuantity').value
+        qtdSelect = document.getElementById('quantitySelect').value
+    } catch{}
     // If the inputs are empty and it's not toCart() calling
     if ((itemName == '' || quantity == '') && item == undefined) {
         warning.style.color = 'red'
