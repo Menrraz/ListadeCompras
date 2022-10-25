@@ -73,8 +73,6 @@ function add(where, item) {
         warning.style.color = 'red'
         setTimeout(function(){warning.style.color = 'transparent'}, 4000)
     } else {
-        document.getElementById('addItemWindow').remove()
-        document.querySelector('.overlay-background').remove()
         let itemKey = 'item' + Object.keys(list).length
         // If there isn't a list already
         if (localStorage.length == 0) {
@@ -84,6 +82,8 @@ function add(where, item) {
             document.querySelector('.noItems').remove()
         }
         if (where == 'list') {
+            document.getElementById('addItemWindow').remove()
+            document.querySelector('.overlay-background').remove()
             list[itemKey] = qtdSelect == 'kg' ? [itemName, [quantity, 'kg']]:[itemName, [quantity]]
             addItemDiv(where, itemKey, itemName, quantity, qtdSelect, null)
         }
