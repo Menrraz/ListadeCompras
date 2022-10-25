@@ -73,6 +73,8 @@ function add(where, item) {
         warning.style.color = 'red'
         setTimeout(function(){warning.style.color = 'transparent'}, 4000)
     } else {
+        document.getElementById('addItemWindow').remove()
+        document.querySelector('.overlay-background').remove()
         let itemKey = 'item' + Object.keys(list).length
         // If there isn't a list already
         if (localStorage.length == 0) {
