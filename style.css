@@ -107,7 +107,6 @@ img {
 .main-card .centralizar input[type='button']:hover {
     background-color: yellow;
     font-weight: bold;
-    transform: scale(1.03);
 }
 .main-card .centralizar select {
     width: 95%;
@@ -283,7 +282,6 @@ p.item-quantity {
 }
 .end input:hover {
     background-color: yellow;
-    transform: scale(1.03);
 }
 .close {
     font-size: 12px;
