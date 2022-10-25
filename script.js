@@ -128,7 +128,7 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
 
 function addMainCard() {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
-    ${addDivItemWindow()}
+    
     <div class='main-card-header'>
         <p class='list' onclick="showListOrCard('list')">Lista</p>
         <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
