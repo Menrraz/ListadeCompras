@@ -38,9 +38,6 @@ function addDivItemWindow(condition) {
 function thereIsAListAlready() {
     if (localStorage.length > 0) {
         addMainCard()
-        // There is two of it
-        document.querySelector('.noItems').remove();document.querySelector('.noItems').remove()
-        
         list = JSON.parse(localStorage.LSItems) // Make list a object again
         let listLength = Object.keys(list).length
         for (let i = 0; i < listLength; i++) {
@@ -78,8 +75,6 @@ function add(where, item) {
         if (localStorage.length == 0) {
             addMainCard()
             addFirstItem.remove()
-            document.querySelector('.noItems').remove()
-            document.querySelector('.noItems').remove()
         }
         if (where == 'list') {
             document.getElementById('addItemWindow').remove()
@@ -141,10 +136,8 @@ function addMainCard() {
         <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
     </div>
     <div class='list-card'>
-        <p class='noItems'>Sem itens</p>
     </div>
     <div class='cart-card'>
-        <p class='noItems'>Sem itens</p>
     </div>
     <div class='total'>
         <p class='total-p-item'></p>
