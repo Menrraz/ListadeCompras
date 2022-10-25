@@ -10,7 +10,10 @@ function main() {
 }
 function addItem() {
     mainHTML.insertAdjacentHTML('beforeend', 
-    `<div id='addItemWindow'>
+    `<div class='overlay-background' onclick="
+    document.querySelector('#addItemWindow').remove();
+    document.querySelector('.overlay-background').remove();"></div>
+    <div id='addItemWindow'>
         ${addDivItemWindow()}
     </div>`)
     document.getElementById('addItemWindow').style.display = 'block'
