@@ -89,6 +89,11 @@ img {
     bottom: 1%;
     position: absolute;
 }
+@media (min-width: 550px) {
+    .main-card {
+        max-width: 478px;
+    }
+}
 .main-card .centralizar {
     display: flex;
     flex-direction: column;
