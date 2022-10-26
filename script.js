@@ -22,6 +22,10 @@ function addItem() {
 function addDivItemWindow(condition) {
     return `
     <div class='centralizar'>
+        <span class='close'  onclick="
+        document.querySelector('#addItemWindow').remove();
+        document.querySelector('.overlay-background').remove()
+        ">X</span>
         <label>Adicione um item</label>
         <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico'>
         <label>Quantidade</label>
