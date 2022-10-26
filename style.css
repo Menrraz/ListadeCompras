@@ -102,7 +102,7 @@ img {
     border-radius: 5px;
 }
 .main-card .list:active, .cart:active {
-    transform: scale(0.90);
+    transform: scale(0.95);
 }
 .main-card .centralizar input[type='button'] {
     margin: 5px 0 0 0;
