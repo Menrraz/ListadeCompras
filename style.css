@@ -329,6 +329,9 @@ p.item-quantity {
     cursor: pointer;
     user-select: none;
 }
+.close:active {
+    transform: scale(0.90);
+}
 .confirmDiv {
     display: flex;
     position: absolute;
