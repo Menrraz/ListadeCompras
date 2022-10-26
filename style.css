@@ -124,7 +124,7 @@ img {
     cursor: pointer;
 }
 .main-card .main-card-header {
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .main-card .list {
     background-color: yellow;
