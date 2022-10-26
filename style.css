@@ -291,6 +291,9 @@ p.item-quantity {
 .end input:hover {
     background-color: yellow;
 }
+.end input:active {
+    transform: scale(0.97);
+}
 .close {
     font-size: 12px;
     font-weight: bold;
