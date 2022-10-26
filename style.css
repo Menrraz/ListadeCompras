@@ -310,3 +310,6 @@ p.item-quantity {
     padding-left: 2px;
     cursor: pointer;
 }
+.confirmDiv p span:hover {
+    background-color: #585858;
+}
