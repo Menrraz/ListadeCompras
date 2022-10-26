@@ -203,6 +203,7 @@ p.item-quantity {
     box-shadow: 3px 3px 7px #000000c4;
     font-size: 30px;
     cursor: pointer;
+    user-select: none;
 }
 .addItem:active {
     transform: scale(0.95);
@@ -301,6 +302,7 @@ p.item-quantity {
     top: 1.5%;
     left: 94.5%;
     cursor: pointer;
+    user-select: none;
 }
 .confirmDiv {
     display: flex;
