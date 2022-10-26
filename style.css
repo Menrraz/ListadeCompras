@@ -204,6 +204,10 @@ p.item-quantity {
     font-size: 30px;
     cursor: pointer;
 }
+.addItem:active {
+    transform: scale(0.95);
+    box-shadow: 4px 4px 7px #000000f1;
+}
 .overlay-background {
     align-items: center;
     justify-content: center;
