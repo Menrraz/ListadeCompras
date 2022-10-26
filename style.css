@@ -181,6 +181,15 @@ p.item-quantity {
     gap: 5px;
     flex-direction: column;
 }
+.div-icons i {
+    font-size: 17px;
+}
+.div-icons i:hover {
+    color: rgb(58, 58, 58);
+}
+.div-icons i:active {
+    transform: scale(0.90);
+}
 .addItem {
     width: 55px;
     height: 55px;
