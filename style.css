@@ -204,6 +204,12 @@ img {
     padding: 3px;
     margin: 5px 0 5px 0;
 }
+.share-div input[type='button']:hover {
+    background-color: yellow;
+}
+.share-div input[type='button']:active {
+    transform: scale(0.95);
+}
 .items {
     display: flex;
     justify-content: space-between;
