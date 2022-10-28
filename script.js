@@ -271,4 +271,11 @@ function share() {
     </div>
     `)
 }
+function copy() {
+    let text = JSON.stringify(list)
+    navigator.clipboard.writeText(text)
+    let button = document.querySelector('.copy-button')
+    button.value = 'Lista copiada!'
+    button.style.backgroundColor = 'yellow'
+}
 main()
