@@ -193,6 +193,10 @@ img {
     align-items: center;
     justify-content: center;
 }
+.share-div p {
+    font-size: 15px;
+    width: 80%;
+}
 .items {
     display: flex;
     justify-content: space-between;
