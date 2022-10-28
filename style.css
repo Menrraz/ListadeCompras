@@ -178,6 +178,21 @@ img {
 .share-button:active {
     transform: scale(0.90);
 }
+.share-div {
+    display: flex;
+    background-color: white;
+    width: 270px;
+    height: 225px;
+    position: fixed;
+    border: gray solid;
+    border-radius: 15px;
+    box-shadow: 4px 6px 9px rgb(0 0 0 / 36%);
+    z-index: 1;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .items {
     display: flex;
     justify-content: space-between;
