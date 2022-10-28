@@ -197,6 +197,13 @@ img {
     font-size: 15px;
     width: 80%;
 }
+.share-div input {
+    font-size: 17px;
+    text-align: center;
+    width: 70%;
+    padding: 3px;
+    margin: 5px 0 5px 0;
+}
 .items {
     display: flex;
     justify-content: space-between;
