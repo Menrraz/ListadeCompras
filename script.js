@@ -260,7 +260,14 @@ function share() {
         document.querySelector('.share-div').remove();
         document.querySelector('.overlay-background').remove()"></div>
     <div class="share-div">
-
+        <span class='close' onclick="
+            document.querySelector('.share-div').remove();
+            document.querySelector('.overlay-background').remove()">X</span>
+        <p>Copie a lista e compartilhe.</p>
+        <input type='button' value='Copiar lista' class='copy-button'onclick='copy()'>
+        <p>Ou cole uma já pronta. (Sobreescreverá a lista atual)</p>
+        <input type='text' placeholder="Cole aqui" id='sharedList'>
+        <input type='button' value='Confirmar' onclick="sharedList()">
     </div>
     `)
 }
