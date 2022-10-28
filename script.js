@@ -254,4 +254,14 @@ function writeTotal() {
     document.querySelector(".total-p-item").innerHTML = `Itens: ${cartAmount}/${listAmount}`
     document.querySelector(".total-p-price").innerHTML = price.toFixed(2)
 }
+function share() {
+    mainHTML.insertAdjacentHTML('beforeend', `
+    <div class='overlay-background' onclick="
+        document.querySelector('.share-div').remove();
+        document.querySelector('.overlay-background').remove()"></div>
+    <div class="share-div">
+
+    </div>
+    `)
+}
 main()
