@@ -278,4 +278,9 @@ function copy() {
     button.value = 'Lista copiada!'
     button.style.backgroundColor = 'yellow'
 }
+function sharedList() {
+    let list = document.getElementById('sharedList').value
+    localStorage.setItem('LSItems', list)
+    window.location.reload()
+}
 main()
