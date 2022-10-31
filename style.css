@@ -180,8 +180,8 @@ img {
 .share-div {
     display: flex;
     background-color: white;
-    width: 270px;
-    height: 225px;
+    width: 317px;
+    height: 261px;
     position: fixed;
     border: gray solid;
     border-radius: 15px;
@@ -193,7 +193,7 @@ img {
     justify-content: center;
 }
 .share-div p {
-    font-size: 15px;
+    font-size: 19px;
     width: 80%;
 }
 .share-div input {
@@ -201,7 +201,7 @@ img {
     text-align: center;
     width: 70%;
     padding: 3px;
-    margin: 5px 0 5px 0;
+    margin: 7px 0 7px 0;
 }
 .share-div input[type='button']:hover {
     background-color: yellow;
