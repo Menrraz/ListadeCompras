@@ -272,11 +272,16 @@ function share() {
     `)
 }
 function copy() {
-    let text = JSON.stringify(list)
-    navigator.clipboard.writeText(text)
     let button = document.querySelector('.copy-button')
-    button.value = 'Lista copiada!'
-    button.style.backgroundColor = 'yellow'
+    if (localStorage.length == 0) {
+        button.value = "Não há uma lista!"
+        button.style.backgroundColor = "indianred" // A "lightred"
+    } else {
+        let text = JSON.stringify(list)
+        navigator.clipboard.writeText(text)
+        button.value = 'Lista copiada!'
+        button.style.backgroundColor = 'yellow'
+    } 
 }
 function sharedList() {
     let list = document.getElementById('sharedList').value
