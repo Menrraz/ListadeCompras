@@ -167,13 +167,12 @@ img {
 }
 .share-button {
     color: black;
-    font-weight: bold;
     font-size: 17px;
     position: absolute;
-    top: -35px;
-    left: 5px;
+    top: 15px;
+    left: 25px;
     cursor: pointer;
-
+    z-index: 1;
 }
 .share-button:active {
     transform: scale(0.90);
