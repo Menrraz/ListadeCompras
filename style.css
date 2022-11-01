@@ -421,3 +421,6 @@ p.item-quantity {
     text-align: center;
     margin: 0 0 10px 0;
 }
+.finish-div input {
+    width: 120px;
+}
