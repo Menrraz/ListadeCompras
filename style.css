@@ -424,3 +424,9 @@ p.item-quantity {
 .finish-div input {
     width: 120px;
 }
+.finish-div input:hover {
+    background-color: yellow;
+}
+.finish-div input:active {
+    transform: scale(0.95);
+}
