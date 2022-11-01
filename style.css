@@ -424,6 +424,10 @@ p.item-quantity {
 }
 .finish-div input {
     width: 120px;
+    border-radius: 10px;
+    padding: 3px;
+    border: 2px solid gray;
+    margin-bottom: 5px;
 }
 .finish-div input:hover {
     background-color: yellow;
