@@ -288,4 +288,8 @@ function sharedList() {
     localStorage.setItem('LSItems', list)
     window.location.reload()
 }
+function finish() {
+    
+}
 main()
+
