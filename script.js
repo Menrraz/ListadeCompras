@@ -148,7 +148,7 @@ function addMainCard() {
         <p class='total-p-total'>Total: <span class='total-p-price'>$</p>
     </div>
     <div class='end'>
-        <input type='button' value='Finalizar Compras' onclick="localStorage.clear(), window.location.reload()">
+        <input type='button' value='Finalizar Compras' onclick="finish()">
     </div>
     <div class='addItem' onclick='addItem()'>+</div>
 </section>`)
