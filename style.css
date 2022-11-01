@@ -415,6 +415,7 @@ p.item-quantity {
     justify-content: center;
     flex-direction: column;
     border: 2px solid gray;
+    box-shadow: 1px 1px 9px 2px #00000033;
 }
 .finish-div p {
     font-size: 20px;
