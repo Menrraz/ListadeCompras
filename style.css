@@ -334,6 +334,12 @@ p.item-quantity {
     border: 2px solid gray;
     border-radius: 5px;
 }
+.toCartDiv input[type='button']:hover {
+    background-color: yellow;
+}
+.toCartDiv input[type='button']:active {
+    transform: scale(0.95);
+}
 .total {
     display: flex;
     flex-direction: row;
