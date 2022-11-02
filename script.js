@@ -285,8 +285,10 @@ function copy() {
 }
 function sharedList() {
     let list = document.getElementById('sharedList').value
-    localStorage.setItem('LSItems', list)
-    window.location.reload()
+    if (list !== '') {
+        localStorage.setItem('LSItems', list)
+        window.location.reload()
+    }
 }
 function finish() {
     mainHTML.insertAdjacentHTML("beforeend", `
