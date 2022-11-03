@@ -209,6 +209,10 @@ img {
 .share-div input[type='button']:active {
     transform: scale(0.95);
 }
+.share-div .share-div-warning {
+    font-size: 12px;
+    color: transparent;
+}
 .items {
     display: flex;
     justify-content: space-between;
