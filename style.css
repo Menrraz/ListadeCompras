@@ -201,7 +201,7 @@ img {
     text-align: center;
     width: 70%;
     padding: 3px;
-    margin: 7px 0 7px 0;
+    margin: 7px 0 0 0;
 }
 .share-div input[type='button']:hover {
     background-color: yellow;
