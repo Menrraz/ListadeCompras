@@ -267,6 +267,7 @@ function share() {
         <input type='button' value='Copiar lista' class='copy-button'onclick='copy()'>
         <p>Ou cole uma já pronta. ${localStorage.length > 0 ? "(Sobreescreverá a lista atual)": ''}</p>
         <input type='text' placeholder="Cole aqui" id='sharedList'>
+        <p class='share-div-warning'>Digite um código válido<p>
         <input type='button' value='Confirmar' onclick="sharedList()">
     </div>
     `)
