@@ -285,7 +285,9 @@ function copy() {
     } 
 }
 function sharedList() {
-    let list = document.getElementById('sharedList').value
+    let inputList = document.getElementById('sharedList').value
+    let list = inputList.split("#") // Separate code from list
+    let [i, j, k] = [Number(list[0][0]), Number(list[0][1]), Number(list[0][2])]
     if (list !== '') {
         localStorage.setItem('LSItems', list)
         window.location.reload()
