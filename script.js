@@ -291,6 +291,18 @@ function sharedList() {
         window.location.reload()
     }
 }
+function code() {
+    let i1 = String(Math.floor(Math.random()*6))
+    let i2 = String(Math.floor(Math.random()*9))
+    let i3 = String(Math.floor(Math.random()*4))
+    return {
+        new: i1 + i2 + i3 + "#",
+        validate(i, j, k) {
+            let validation = i < 6 && j < 9 && k < 4 ? true: false
+            return validation
+        }
+    }
+}
 function finish() {
     mainHTML.insertAdjacentHTML("beforeend", `
     <div class='overlay-background' onclick="
