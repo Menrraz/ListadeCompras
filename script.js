@@ -287,6 +287,7 @@ function copy() {
 function sharedList() {
     let inputList = document.getElementById('sharedList').value
     let list = inputList.split("#") // Separate code from list
+    // Get code digits
     let [i, j, k] = [Number(list[0][0]), Number(list[0][1]), Number(list[0][2])]
     if (list !== '') {
         localStorage.setItem('LSItems', list)
