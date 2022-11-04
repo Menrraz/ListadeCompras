@@ -279,7 +279,7 @@ function copy() {
         button.style.backgroundColor = "indianred" // A "lightred"
     } else {
         let text = JSON.stringify(list)
-        navigator.clipboard.writeText(text)
+        navigator.clipboard.writeText(code().new + text)
         button.value = 'Lista copiada!'
         button.style.backgroundColor = 'yellow'
     } 
