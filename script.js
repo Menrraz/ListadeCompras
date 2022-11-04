@@ -318,7 +318,7 @@ function finish() {
         <p>Tem certeza que deseja terminar as compras?</p>
         <div class='input-div'>
             <input type='button' value='Confirmar' onclick="localStorage.clear(), window.location.reload()">
-            <input type='button' value='Cancelar' onclick="
+            <input class='cancel' type='button' value='Cancelar' onclick="
                 document.querySelector('.finish-div').remove();
                 document.querySelector('.overlay-background').remove();">
         </div>
