@@ -445,3 +445,6 @@ p.item-quantity {
 .finish-div input:active {
     transform: scale(0.95);
 }
+.finish-div .cancel:hover {
+    background-color: indianred;
+}
