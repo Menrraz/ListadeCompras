@@ -290,8 +290,10 @@ function sharedList() {
     // Get code digits
     let [i, j, k] = [Number(list[0][0]), Number(list[0][1]), Number(list[0][2])]
     try {list = JSON.parse(list[1])} catch{document.querySelector(".share-div-warning").style.color = 'red'; return}
-    if (list !== '') {
-        localStorage.setItem('LSItems', list)
+    if (inputList == '' || !code().validate(i, j, k) || typeof list !== 'object') {
+        document.querySelector(".share-div-warning").style.color = 'red'
+    } else {
+        localStorage.setItem('LSItems', JSON.stringify(list))
         window.location.reload()
     }
 }
