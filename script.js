@@ -17,7 +17,6 @@ function addItem() {
         ${addDivItemWindow()}
     </div>`)
     document.getElementById('addItemWindow').style.display = 'block'
-    
 }
 function addDivItemWindow(condition) {
     return `
@@ -38,7 +37,6 @@ function addDivItemWindow(condition) {
         <p id='warning'>Preencha todos os dados.</p>
     </div>`
 }
-
 function thereIsAListAlready() {
     if (localStorage.length > 0) {
         addMainCard()
@@ -61,7 +59,6 @@ function thereIsAListAlready() {
     }
     writeTotal()
 }
-
 function add(where, item) { 
    let [itemName, quantity, qtdSelect] = ''
     try { // It's inside try because sometimes these values won't be available
@@ -99,7 +96,6 @@ function add(where, item) {
         writeTotal()
     }
 }
-
 function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
     // Select and identify where the item will go, cart or list
     let list = document.querySelector('.list-card')
@@ -107,7 +103,6 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
     let div = where == 'list' ? list : cart
     qtdSelect = qtdSelect == 'kg' ? 'kg': '' 
     let priceTotal = price*quantity
-    
     function addDivIcons(where) {
         // It always return the trash icon
         return `
@@ -131,7 +126,6 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
             ${addDivIcons(where)}
         </div>`)
 }
-
 function addMainCard() {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
     
@@ -326,4 +320,3 @@ function finish() {
     `)
 }
 main()
-
