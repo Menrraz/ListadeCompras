@@ -22,8 +22,8 @@ function addDivItemWindow(condition) {
     return `
     <div class='centralizar'>
         <span class='close'  onclick="
-        document.querySelector('#addItemWindow').remove();
-        document.querySelector('.overlay-background').remove()
+            document.querySelector('#addItemWindow').remove();
+            document.querySelector('.overlay-background').remove()
         ">X</span>
         <label>Adicione um item</label>
         <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico' autofocus>
@@ -128,7 +128,6 @@ function addItemDiv(where, itemKey, itemName, quantity, qtdSelect, price) {
 }
 function addMainCard() {
     mainHTML.insertAdjacentHTML('beforeend', `<section class='main-card'>
-    
     <div class='main-card-header'>
         <p class='list' onclick="showListOrCard('list')">Lista</p>
         <p class='cart' onclick="showListOrCard('cart')">Carrinho</p>
@@ -198,12 +197,12 @@ function undo(timeId, itemName, quantity, qtdSelect, price) {
 function addToCartDiv(item, quantity) {
     mainHTML.insertAdjacentHTML('beforeend', `
     <div class='overlay-background' onclick="
-    document.querySelector('.toCartDiv').remove();
-    document.querySelector('.overlay-background').remove()"></div>
+        document.querySelector('.toCartDiv').remove();
+        document.querySelector('.overlay-background').remove()"></div>
     <div class='toCartDiv'>
         <span class='close' onclick="
-        document.querySelector('.toCartDiv').remove();
-        document.querySelector('.overlay-background').remove()">X</span>
+            document.querySelector('.toCartDiv').remove();
+            document.querySelector('.overlay-background').remove()">X</span>
         <label>Quantidade:</label>
         <input type='number' value='${quantity}' id="toCartQuantity" placeholder='Quantos?'>
         <label>Quanto custou?</label>
