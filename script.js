@@ -27,7 +27,7 @@ function addDivItemWindow(condition) {
         document.querySelector('.overlay-background').remove()
         ">X</span>
         <label>Adicione um item</label>
-        <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico'>
+        <input type="text" name="NomeDoItem" id="itemName" placeholder='Ex.: Papel Higiênico' autofocus>
         <label>Quantidade</label>
         <select id='quantitySelect'>
             <option value="unity">Unidade</option>
